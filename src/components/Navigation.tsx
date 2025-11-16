@@ -28,7 +28,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 animate-fade-in ${
         isScrolled
           ? "bg-background/95 backdrop-blur-lg shadow-[var(--shadow-soft)]"
           : "bg-transparent"
@@ -37,11 +37,14 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-primary">
-              Bloom<span className="text-accent">.Dental</span>
-            </div>
-          </a>
+          <a href="#home" className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300">
+  <img
+    src="/photos/logo.jpg"
+    alt="Bloom Dental Logo"
+    className="w-24 h-24 rounded-full object-cover shadow-md"
+  />
+</a>
+
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">

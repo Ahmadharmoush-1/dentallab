@@ -39,10 +39,10 @@ export default function About() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="luxury-card p-8 text-center hover:scale-105 animate-fade-in"
-            style={{ animationDelay: `${index * 100}ms` }}
+            className="luxury-card p-8 text-center hover:scale-105 hover:shadow-xl transition-all duration-300 animate-fade-in"
+            style={{ animationDelay: `${index * 150}ms` }}
           >
-            <div className="w-16 h-16 mx-auto mb-6 bg-accent/10 rounded-full flex items-center justify-center">
+            <div className="w-16 h-16 mx-auto mb-6 bg-accent/10 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
               <feature.icon className="w-8 h-8 text-accent" />
             </div>
             <h3 className="text-xl font-semibold text-primary mb-3">

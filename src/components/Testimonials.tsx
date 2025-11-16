@@ -46,15 +46,16 @@ export default function Testimonials() {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="luxury-card p-8 animate-fade-in"
+            className="luxury-card p-8 animate-fade-in hover:scale-105 hover:shadow-xl transition-all duration-300"
             style={{ animationDelay: `${index * 100}ms` }}
           >
             {/* Stars */}
-            <div className="flex mb-4">
+            <div className="flex mb-4 gap-1">
               {[...Array(testimonial.rating)].map((_, i) => (
                 <Star
                   key={i}
-                  className="w-5 h-5 fill-accent text-accent"
+                  className="w-5 h-5 fill-accent text-accent animate-fade-in"
+                  style={{ animationDelay: `${(index * 100) + (i * 50)}ms` }}
                 />
               ))}
             </div>
@@ -70,7 +71,7 @@ export default function Testimonials() {
                 <p className="font-semibold text-primary">{testimonial.name}</p>
                 <p className="text-sm text-accent">{testimonial.treatment}</p>
               </div>
-              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300">
                 <span className="text-accent font-bold text-lg">
                   {testimonial.name.charAt(0)}
                 </span>

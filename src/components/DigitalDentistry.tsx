@@ -53,10 +53,10 @@ export default function DigitalDentistry() {
         {technologies.map((tech, index) => (
           <div
             key={index}
-            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300 animate-fade-in"
+            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 hover:scale-105 transition-all duration-300 animate-fade-in group"
             style={{ animationDelay: `${index * 100}ms` }}
           >
-            <div className="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center mb-4">
+            <div className="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
               <tech.icon className="w-7 h-7 text-accent" />
             </div>
             <h3 className="text-xl font-semibold mb-3">{tech.title}</h3>

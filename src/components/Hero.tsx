@@ -1,12 +1,12 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
-
+import heroImage from "@/assets/hero-dental-clinic.jpg";
 
 export default function Hero() {
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 animate-fade-in">
        <img
   src="/photos/dentalview.jpg"   // <-- put your image path here
   alt="Bloom Dental Clinic"
@@ -15,27 +15,27 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
       </div>
 
-      {/* Content */}
+       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
-        <div className="max-w-3xl animate-fade-in">
-          <div className="mb-6 inline-block">
+        <div className="max-w-3xl">
+          <div className="mb-6 inline-block animate-fade-in" style={{ animationDelay: "200ms" }}>
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">
               Premium Dental Care
             </span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in" style={{ animationDelay: "400ms" }}>
             Bloom Dental Clinic<span className="text-accent">.lb</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-2xl">
+          <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: "600ms" }}>
             Our team dedicates the time and technology needed to perfect your smile.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "800ms" }}>
             <Button
               size="lg"
-              className="luxury-button text-lg px-8 py-6 group"
+              className="luxury-button text-lg px-8 py-6 group hover:scale-105 transition-all duration-300"
               onClick={() => (window.location.href = "#clinic")}
             >
               Explore the Clinic
@@ -45,7 +45,7 @@ export default function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
+              className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:scale-105 transition-all duration-300"
               onClick={() => (window.location.href = "#contact")}
             >
               Book Appointment

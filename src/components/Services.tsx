@@ -79,11 +79,41 @@ export default function Services() {
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Mobile: Horizontal Scroll with Snap */}
+      <div className="relative lg:hidden">
+        <div className="overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth pb-4">
+          <div className="flex gap-4 px-4">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="luxury-card p-6 cursor-pointer group min-w-[280px] snap-center animate-fade-in hover:scale-105 transition-all duration-300"
+                style={{ animationDelay: `${index * 50}ms` }}
+                onClick={() => setSelectedService(service)}
+              >
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                  <service.icon className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-primary mb-2 group-hover:text-accent transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {service.shortDesc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Gradient Indicators */}
+        <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-background to-transparent pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent pointer-events-none" />
+      </div>
+
+      {/* Desktop: Grid Layout */}
+      <div className="hidden lg:grid lg:grid-cols-4 gap-6">
         {services.map((service, index) => (
           <div
             key={index}
-            className="luxury-card p-6 cursor-pointer group animate-fade-in"
+            className="luxury-card p-6 cursor-pointer group animate-fade-in hover:scale-105 transition-all duration-300"
             style={{ animationDelay: `${index * 50}ms` }}
             onClick={() => setSelectedService(service)}
           >

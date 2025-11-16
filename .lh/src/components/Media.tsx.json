@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1763304280034,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1763306452072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,18 +63,18 @@\n       <div className=\"grid sm:grid-cols-2 lg:grid-cols-3 gap-8\">\r\n         {mediaItems.map((item, index) => (\r\n           <div\r\n             key={index}\r\n-            className=\"luxury-card overflow-hidden group cursor-pointer animate-fade-in\"\r\n+            className=\"luxury-card overflow-hidden group cursor-pointer animate-fade-in hover:scale-105 hover:shadow-xl transition-all duration-300\"\r\n             style={{ animationDelay: `${index * 100}ms` }}\r\n           >\r\n             <div className=\"relative overflow-hidden\">\r\n               <img\r\n                 src={item.thumbnail}\r\n                 alt={item.title}\r\n                 className=\"w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500\"\r\n               />\r\n-              <div className=\"absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center\">\r\n+              <div className=\"absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300\">\r\n                 <item.icon className=\"w-5 h-5 text-primary\" />\r\n               </div>\r\n             </div>\r\n             <div className=\"p-6\">\r\n"
                 }
             ],
             "date": 1763304280034,

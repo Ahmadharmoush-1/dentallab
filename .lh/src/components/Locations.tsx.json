@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1763304273095,
@@ -20,6 +20,14 @@
                 {
                     "date": 1763304885449,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n         <span className=\"text-accent font-semibold text-sm uppercase tracking-wider\">\r\n           Visit Us\r\n         </span>\r\n         <h2 className=\"text-4xl md:text-5xl font-bold text-primary mt-4 mb-6\">\r\n-          Our Locations\r\n+          Our Location\r\n         </h2>\r\n         <p className=\"text-lg text-muted-foreground max-w-3xl mx-auto\">\r\n           Two world-class clinics serving patients across the Middle East\r\n         </p>\r\n"
+                },
+                {
+                    "date": 1763306434539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n       <div className=\"grid lg:grid-cols-2 gap-8\">\r\n         {locations.map((location, index) => (\r\n           <div\r\n             key={index}\r\n-            className=\"luxury-card overflow-hidden animate-fade-in\"\r\n+            className=\"luxury-card overflow-hidden animate-fade-in hover:scale-105 hover:shadow-xl transition-all duration-300\"\r\n             style={{ animationDelay: `${index * 200}ms` }}\r\n           >\r\n             {/* Map */}\r\n             <div className=\"w-full h-64 bg-muted\">\r\n"
+                },
+                {
+                    "date": 1763306444654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n                   </p>\r\n                 </div>\r\n               </div>\r\n \r\n-              <Button className=\"w-full luxury-button\" size=\"lg\">\r\n+              <Button className=\"w-full luxury-button hover:scale-105 transition-transform duration-300\" size=\"lg\">\r\n                 Get Directions\r\n               </Button>\r\n             </div>\r\n           </div>\r\n"
                 }
             ],
             "date": 1763304273095,

@@ -69,63 +69,96 @@ export default function Team() {
       </div>
 
       <div className="relative">
-        {/* Team Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          {getVisibleMembers().map((member, index) => (
-            <div
-              key={`${member.name}-${index}`}
-              className="luxury-card p-8 text-center animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-accent/20">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-primary mb-2">{member.name}</h3>
-              <p className="text-accent font-semibold mb-4">{member.specialty}</p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {member.bio}
-              </p>
+        {/* Mobile: Horizontal Scroll with Snap */}
+        <div className="relative md:hidden">
+          <div className="overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth pb-4">
+            <div className="flex gap-6 px-4">
+              {teamMembers.map((member, index) => (
+                <div
+                  key={member.name}
+                  className="luxury-card p-8 text-center min-w-[300px] snap-center animate-fade-in hover:scale-105 transition-all duration-300"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-accent/20 transition-transform hover:scale-110">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary mb-2">{member.name}</h3>
+                  <p className="text-accent font-semibold mb-4">{member.specialty}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {member.bio}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+          {/* Gradient Indicators */}
+          <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-secondary/30 to-transparent pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-secondary/30 to-transparent pointer-events-none" />
         </div>
 
-        {/* Navigation Buttons */}
-        <div className="flex justify-center items-center space-x-4">
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={prev}
-            className="rounded-full w-12 h-12"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </Button>
-          
-          <div className="flex space-x-2">
-            {teamMembers.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === currentIndex
-                    ? "bg-accent w-8"
-                    : "bg-muted-foreground/30"
-                }`}
-              />
+        {/* Desktop: Carousel with Navigation */}
+        <div className="hidden md:block">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {getVisibleMembers().map((member, index) => (
+              <div
+                key={`${member.name}-${index}`}
+                className="luxury-card p-8 text-center animate-fade-in hover:scale-105 transition-all duration-300"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-accent/20 transition-transform hover:scale-110">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-2">{member.name}</h3>
+                <p className="text-accent font-semibold mb-4">{member.specialty}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {member.bio}
+                </p>
+              </div>
             ))}
           </div>
 
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={next}
-            className="rounded-full w-12 h-12"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </Button>
+          {/* Navigation Buttons */}
+          <div className="flex justify-center items-center space-x-4">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={prev}
+              className="rounded-full w-12 h-12 hover:scale-110 transition-transform"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </Button>
+            
+            <div className="flex space-x-2">
+              {teamMembers.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    index === currentIndex
+                      ? "bg-accent w-8"
+                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                  }`}
+                />
+              ))}
+            </div>
+
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={next}
+              className="rounded-full w-12 h-12 hover:scale-110 transition-transform"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </Button>
+          </div>
         </div>
       </div>
     </section>

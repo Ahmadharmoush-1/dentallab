@@ -41,7 +41,7 @@ export default function Locations() {
         {locations.map((location, index) => (
           <div
             key={index}
-            className="luxury-card overflow-hidden animate-fade-in"
+            className="luxury-card overflow-hidden animate-fade-in hover:scale-105 hover:shadow-xl transition-all duration-300"
             style={{ animationDelay: `${index * 200}ms` }}
           >
             {/* Map */}
@@ -89,7 +89,7 @@ export default function Locations() {
                 </div>
               </div>
 
-              <Button className="w-full luxury-button" size="lg">
+              <Button className="w-full luxury-button hover:scale-105 transition-transform duration-300" size="lg">
                 Get Directions
               </Button>
             </div>

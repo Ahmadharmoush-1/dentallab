@@ -64,7 +64,7 @@ export default function Media() {
         {mediaItems.map((item, index) => (
           <div
             key={index}
-            className="luxury-card overflow-hidden group cursor-pointer animate-fade-in"
+            className="luxury-card overflow-hidden group cursor-pointer animate-fade-in hover:scale-105 hover:shadow-xl transition-all duration-300"
             style={{ animationDelay: `${index * 100}ms` }}
           >
             <div className="relative overflow-hidden">
@@ -73,7 +73,7 @@ export default function Media() {
                 alt={item.title}
                 className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
               />
-              <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center">
+              <div className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                 <item.icon className="w-5 h-5 text-primary" />
               </div>
             </div>

@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1763304326429,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1763306523682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,17 +45,18 @@\n       <div className=\"grid md:grid-cols-2 gap-8\">\r\n         {testimonials.map((testimonial, index) => (\r\n           <div\r\n             key={index}\r\n-            className=\"luxury-card p-8 animate-fade-in\"\r\n+            className=\"luxury-card p-8 animate-fade-in hover:scale-105 hover:shadow-xl transition-all duration-300\"\r\n             style={{ animationDelay: `${index * 100}ms` }}\r\n           >\r\n             {/* Stars */}\r\n-            <div className=\"flex mb-4\">\r\n+            <div className=\"flex mb-4 gap-1\">\r\n               {[...Array(testimonial.rating)].map((_, i) => (\r\n                 <Star\r\n                   key={i}\r\n-                  className=\"w-5 h-5 fill-accent text-accent\"\r\n+                  className=\"w-5 h-5 fill-accent text-accent animate-fade-in\"\r\n+                  style={{ animationDelay: `${(index * 100) + (i * 50)}ms` }}\r\n                 />\r\n               ))}\r\n             </div>\r\n \r\n@@ -69,9 +70,9 @@\n               <div>\r\n                 <p className=\"font-semibold text-primary\">{testimonial.name}</p>\r\n                 <p className=\"text-sm text-accent\">{testimonial.treatment}</p>\r\n               </div>\r\n-              <div className=\"w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center\">\r\n+              <div className=\"w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center hover:scale-110 hover:rotate-6 transition-all duration-300\">\r\n                 <span className=\"text-accent font-bold text-lg\">\r\n                   {testimonial.name.charAt(0)}\r\n                 </span>\r\n               </div>\r\n"
                 }
             ],
             "date": 1763304326429,
