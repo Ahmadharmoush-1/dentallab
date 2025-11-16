@@ -4,7 +4,7 @@ const mediaItems = [
   {
     type: "video",
     icon: Video,
-    title: "Dr. Haddad on Modern Implantology",
+    title: "Dr. on Modern Implantology",
     source: "YouTube Interview",
     thumbnail: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=300&fit=crop",
   },

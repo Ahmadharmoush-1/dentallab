@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1763304280034,
@@ -20,6 +20,10 @@
                 {
                     "date": 1763308963716,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,15 +35,15 @@\n     title: \"Clinic Tour: Behind the Scenes\",\r\n     source: \"YouTube\",\r\n     thumbnail: \"https://images.unsplash.com/photo-1629909615184-74f495363b67?w=400&h=300&fit=crop\",\r\n   },\r\n-  {\r\n-    type: \"social\",\r\n-    icon: Instagram,\r\n-    title: \"Testimonial: Complete Smile Makeover\",\r\n-    source: \"Instagram\",\r\n-    thumbnail: \"https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop\",\r\n-  },\r\n+//   {\r\n+//     type: \"social\",\r\n+//     icon: Instagram,\r\n+//     title: \"Testimonial: Complete Smile Makeover\",\r\n+//     source: \"Instagram\",\r\n+//     thumbnail: \"https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop\",\r\n+//   },\r\n ];\r\n \r\n export default function Media() {\r\n   return (\r\n"
+                },
+                {
+                    "date": 1763309601044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const mediaItems = [\r\n   {\r\n     type: \"video\",\r\n     icon: Video,\r\n-    title: \"Dr. Haddad on Modern Implantology\",\r\n+    title: \"Dr. on Modern Implantology\",\r\n     source: \"YouTube Interview\",\r\n     thumbnail: \"https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=300&fit=crop\",\r\n   },\r\n //   {\r\n"
                 }
             ],
             "date": 1763304280034,
