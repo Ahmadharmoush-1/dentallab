@@ -2,103 +2,154 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
 @layer base {
   :root {
-    --background: 0 0% 98%; /* light gray */
-    --foreground: 240 4% 10%; /* rich charcoal */
+    --background: 0 0% 100%;
+    --foreground: 215 45% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 4% 10%;
+    --card-foreground: 215 45% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 4% 10%;
+    --popover-foreground: 215 45% 12%;
 
-    --primary: 240 4% 10%; /* rich charcoal */
-    --primary-foreground: 0 0% 98%; /* very light grey */
+    /* Deep navy blue - luxury medical */
+    --primary: 215 55% 15%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 94%; /* light grey */
-    --secondary-foreground: 240 4% 10%;
+    /* Light blue accent */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 45% 12%;
 
-    --muted: 0 0% 90%; /* pale grey */
-    --muted-foreground: 240 4% 40%; /* mid grey */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 0 0% 92%;
-    --accent-foreground: 240 4% 10%;
+    /* Gold luxury accent */
+    --accent: 40 70% 60%;
+    --accent-foreground: 215 45% 12%;
 
-    --destructive: 0 60% 50%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 4% 85%;
-    --input: 240 4% 85%;
-    --ring: 240 4% 30%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 215 55% 15%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Sidebar styling */
-    --sidebar-background: 0 0% 96%;
-    --sidebar-foreground: 240 4% 25%;
-    --sidebar-primary: 240 5% 15%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 90%;
-    --sidebar-accent-foreground: 240 4% 15%;
-    --sidebar-border: 240 4% 85%;
-    --sidebar-ring: 240 5% 50%;
+    /* Custom luxury dental theme colors */
+    --navy-darker: 215 60% 10%;
+    --navy-light: 215 45% 25%;
+    --gold: 40 70% 60%;
+    --gold-light: 40 80% 70%;
+    --blue-light: 210 50% 96%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(215 55% 15%) 0%, hsl(215 60% 10%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(40 70% 60%) 0%, hsl(40 80% 70%) 100%);
+    --gradient-overlay: linear-gradient(180deg, rgba(15, 31, 61, 0.8) 0%, rgba(15, 31, 61, 0.6) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px rgba(15, 31, 61, 0.08);
+    --shadow-medium: 0 8px 30px rgba(15, 31, 61, 0.12);
+    --shadow-strong: 0 20px 60px rgba(15, 31, 61, 0.15);
+    --shadow-gold: 0 8px 24px rgba(218, 165, 32, 0.2);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 240 5% 10%;
+    --background: 215 55% 8%;
     --foreground: 0 0% 98%;
 
-    --card: 240 5% 12%;
+    --card: 215 50% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 5% 12%;
+    --popover: 215 50% 12%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 0 0% 98%;
-    --primary-foreground: 240 5% 10%;
+    --primary-foreground: 215 55% 15%;
 
-    --secondary: 240 3% 20%;
+    --secondary: 215 45% 18%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 3% 20%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 215 45% 18%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 240 3% 20%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 40 70% 60%;
+    --accent-foreground: 215 45% 12%;
 
-    --destructive: 0 50% 40%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3% 25%;
-    --input: 240 3% 25%;
-    --ring: 240 5% 60%;
-
-    --sidebar-background: 240 5% 10%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 240 5% 30%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 3% 18%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 240 3% 25%;
-    --sidebar-ring: 240 5% 60%;
-  }
-
-  * {
-    border-color: hsl(var(--border));
-  }
-
-  body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-  }
-  @media only screen and (max-width: 768px) {
-  body {
-    background-image: url('\public\photos\backgroundimage.png');
-    background-size: auto;
-    background-repeat: repeat;
+    --border: 215 45% 18%;
+    --input: 215 45% 18%;
+    --ring: 215 55% 30%;
   }
 }
 
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-primary;
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+}
+
+@layer utilities {
+  .luxury-card {
+    @apply bg-card rounded-xl shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-medium)] transition-[var(--transition-smooth)];
+  }
+
+  .luxury-button {
+    @apply bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--gold-light))] text-primary font-semibold rounded-lg shadow-[var(--shadow-gold)] hover:scale-105 transition-[var(--transition-smooth)];
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
 }

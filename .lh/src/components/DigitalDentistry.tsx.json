@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/DigitalDentistry.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1763304240640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1763304240640,
+            "name": "Commit-0",
+            "content": "import { Cpu, Scan, Printer, Zap, Monitor, Target } from \"lucide-react\";\r\n\r\nconst technologies = [\r\n  {\r\n    icon: Cpu,\r\n    title: \"CAD/CAM Fabrication\",\r\n    description: \"Computer-aided design and manufacturing for same-day restorations.\",\r\n  },\r\n  {\r\n    icon: Scan,\r\n    title: \"Digital Impressions\",\r\n    description: \"No messy molds—accurate 3D scans in seconds for perfect fit.\",\r\n  },\r\n  {\r\n    icon: Monitor,\r\n    title: \"Intraoral Scanning\",\r\n    description: \"Real-time visualization of your teeth for enhanced diagnostics.\",\r\n  },\r\n  {\r\n    icon: Printer,\r\n    title: \"3D Printing\",\r\n    description: \"Rapid prototyping of surgical guides, models, and aligners.\",\r\n  },\r\n  {\r\n    icon: Target,\r\n    title: \"Smile Simulation\",\r\n    description: \"Preview your new smile before treatment begins with digital mockups.\",\r\n  },\r\n  {\r\n    icon: Zap,\r\n    title: \"Laser Dentistry\",\r\n    description: \"Minimally invasive laser treatments for precise, comfortable procedures.\",\r\n  },\r\n];\r\n\r\nexport default function DigitalDentistry() {\r\n  return (\r\n    <section id=\"digital\" className=\"section-container bg-primary text-white\">\r\n      <div className=\"text-center mb-16 animate-fade-in\">\r\n        <span className=\"text-accent font-semibold text-sm uppercase tracking-wider\">\r\n          Innovation\r\n        </span>\r\n        <h2 className=\"text-4xl md:text-5xl font-bold mt-4 mb-6\">\r\n          Digital Dentistry\r\n        </h2>\r\n        <p className=\"text-lg text-white/80 max-w-3xl mx-auto leading-relaxed\">\r\n          We harness the power of advanced digital technology to deliver faster, \r\n          more accurate, and more comfortable dental treatments.\r\n        </p>\r\n      </div>\r\n\r\n      <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8\">\r\n        {technologies.map((tech, index) => (\r\n          <div\r\n            key={index}\r\n            className=\"bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300 animate-fade-in\"\r\n            style={{ animationDelay: `${index * 100}ms` }}\r\n          >\r\n            <div className=\"w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center mb-4\">\r\n              <tech.icon className=\"w-7 h-7 text-accent\" />\r\n            </div>\r\n            <h3 className=\"text-xl font-semibold mb-3\">{tech.title}</h3>\r\n            <p className=\"text-white/70 leading-relaxed\">{tech.description}</p>\r\n          </div>\r\n        ))}\r\n      </div>\r\n    </section>\r\n  );\r\n}\r\n"
+        }
+    ]
+}

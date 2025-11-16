@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/Index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1763304338427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1763304338427,
+            "name": "Commit-0",
+            "content": "import Navigation from \"@/components/Navigation\";\r\nimport Hero from \"@/components/Hero\";\r\nimport About from \"@/components/About\";\r\nimport Services from \"@/components/Services\";\r\nimport DigitalDentistry from \"@/components/DigitalDentistry\";\r\nimport DentalLab from \"@/components/DentalLab\";\r\nimport Team from \"@/components/Team\";\r\nimport PatientCases from \"@/components/PatientCases\";\r\nimport Media from \"@/components/Media\";\r\nimport Testimonials from \"@/components/Testimonials\";\r\nimport Locations from \"@/components/Locations\";\r\nimport Contact from \"@/components/Contact\";\r\nimport Footer from \"@/components/Footer\";\r\n\r\nconst Index = () => {\r\n  return (\r\n    <div className=\"min-h-screen\">\r\n      <Navigation />\r\n      <Hero />\r\n      <About />\r\n      <Services />\r\n      <DigitalDentistry />\r\n      <DentalLab />\r\n      <Team />\r\n      <PatientCases />\r\n      <Media />\r\n      <Testimonials />\r\n      <Locations />\r\n      <Contact />\r\n      <Footer />\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default Index;\r\n"
+        }
+    ]
+}

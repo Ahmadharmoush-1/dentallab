@@ -1,0 +1,65 @@
+import { ArrowRight } from "lucide-react";
+import { Button } from "./ui/button";
+
+
+export default function Hero() {
+  return (
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+       <img
+  src="/photos/dentalview.jpg"   // <-- put your image path here
+  alt="Bloom Dental Clinic"
+  className="w-full h-full object-cover"
+/>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+        <div className="max-w-3xl animate-fade-in">
+          <div className="mb-6 inline-block">
+            <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+              Premium Dental Care
+            </span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Bloom Dental Clinic<span className="text-accent">.lb</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-2xl">
+            Our team dedicates the time and technology needed to perfect your smile.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button
+              size="lg"
+              className="luxury-button text-lg px-8 py-6 group"
+              onClick={() => (window.location.href = "#clinic")}
+            >
+              Explore the Clinic
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
+              onClick={() => (window.location.href = "#contact")}
+            >
+              Book Appointment
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
+          <div className="w-1 h-3 bg-white/70 rounded-full"></div>
+        </div>
+      </div>
+    </section>
+  );
+}
