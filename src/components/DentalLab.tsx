@@ -1,5 +1,5 @@
 import { Wrench, Clock, Scan, Users, Award, Cog } from "lucide-react";
-import labImage from "@/assets/dental-lab.jpg";
+// import labImage from "@/assets/dental-lab.jpg";
 
 const labServices = [
   {
@@ -52,7 +52,7 @@ export default function DentalLab() {
         {/* Lab Image */}
         <div className="animate-fade-in hover:scale-105 transition-all duration-500">
           <img
-            src={labImage}
+            // src={labImage}
             alt="Bloom Dental Laboratory"
             className="rounded-2xl shadow-[var(--shadow-strong)] w-full h-[400px] object-cover"
           />

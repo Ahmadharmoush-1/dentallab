@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
-import heroImage from "@/assets/hero-dental-clinic.jpg";
+// import heroImage from "@/assets/hero-dental-clinic.jpg";
 
 export default function Hero() {
   return (
