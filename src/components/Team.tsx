@@ -4,35 +4,36 @@ import { Button } from "./ui/button";
 
 const teamMembers = [
   {
-    name: "Dr. Maya Haddad",
-    specialty: "Prosthodontist & Implantologist",
-    bio: "Over 15 years of experience in complex prosthodontics and dental implant surgery. Certified by the International Congress of Oral Implantologists.",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop",
-  },
-  {
-    name: "Dr. Karim Fares",
-    specialty: "Periodontist",
-    bio: "Specialist in gum health and periodontal surgery. Trained in advanced bone grafting techniques and laser-assisted periodontal therapy.",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop",
-  },
-  {
-    name: "Dr. Layla Nader",
-    specialty: "Cosmetic Dentist",
-    bio: "Expert in aesthetic dentistry including veneers, smile makeovers, and advanced whitening treatments. Member of the American Academy of Cosmetic Dentistry.",
-    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop",
-  },
-  {
-    name: "Dr. Omar Khalil",
-    specialty: "Endodontist",
-    bio: "Specialized in root canal therapy and endodontic microsurgery. Utilizes the latest rotary systems and regenerative techniques.",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop",
-  },
-  {
-    name: "Dr. Sara Badran",
-    specialty: "Orthodontist",
-    bio: "Certified Invisalign provider with expertise in clear aligner therapy and digital smile design. Focuses on adult and adolescent orthodontics.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
-  },
+  name: "Dr. Nicolas Sakr",
+  specialty: "Prosthodontist",
+  bio: "Expert in prosthodontic rehabilitation including crowns, bridges, veneers, and full-mouth restorations. Specialized in digital smile design and advanced implant prosthetics.",
+  image: "/photos/DrNICOLAS.png",
+},
+{
+  name: "Dr. Sara Chehab",
+  specialty: "Endodontology Specialist",
+  bio: "Specialist in root canal therapy and endodontic microsurgery. Utilizes state-of-the-art rotary systems, CBCT diagnostics, and modern pain-free treatment techniques.",
+  image: "/photos/DrSARA.png",
+},
+{
+  name: "Dr. Chloe Haddad",
+  specialty: "Pediatric Dentist",
+  bio: "Dedicated to children’s oral health, providing gentle, child-friendly treatments. Experienced in behavior management, dental growth monitoring, and preventive pediatric care.",
+  image: "/photos/DrCHLOE.png",
+},
+{
+  name: "Dr. Marc Abou Nahed",
+  specialty: "Orthodontist",
+  bio: "Specialized in orthodontic treatments including braces, clear aligners, and bite correction. Focused on achieving functional, aesthetic, and long-lasting smile alignment.",
+  image: "/photos/DrMARC.png",
+},
+
+//   {
+//     name: "Dr. Sara Badran",
+//     specialty: "Orthodontist",
+//     bio: "Certified Invisalign provider with expertise in clear aligner therapy and digital smile design. Focuses on adult and adolescent orthodontics.",
+//     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+//   },
 ];
 
 export default function Team() {

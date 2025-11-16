@@ -8,13 +8,13 @@ const mediaItems = [
     source: "YouTube Interview",
     thumbnail: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=300&fit=crop",
   },
-  {
-    type: "article",
-    icon: Newspaper,
-    title: "The Future of Digital Dentistry",
-    source: "Dental Tribune",
-    thumbnail: "https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop",
-  },
+//   {
+//     type: "article",
+//     icon: Newspaper,
+//     title: "The Future of Digital Dentistry",
+//     source: "Dental Tribune",
+//     thumbnail: "https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop",
+//   },
   {
     type: "social",
     icon: Instagram,
@@ -36,13 +36,13 @@ const mediaItems = [
     source: "YouTube",
     thumbnail: "https://images.unsplash.com/photo-1629909615184-74f495363b67?w=400&h=300&fit=crop",
   },
-  {
-    type: "social",
-    icon: Instagram,
-    title: "Testimonial: Complete Smile Makeover",
-    source: "Instagram",
-    thumbnail: "https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop",
-  },
+//   {
+//     type: "social",
+//     icon: Instagram,
+//     title: "Testimonial: Complete Smile Makeover",
+//     source: "Instagram",
+//     thumbnail: "https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop",
+//   },
 ];
 
 export default function Media() {

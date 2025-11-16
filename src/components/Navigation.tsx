@@ -41,7 +41,7 @@ export default function Navigation() {
   <img
     src="/photos/logo.jpg"
     alt="Bloom Dental Logo"
-    className="w-24 h-24 rounded-full object-cover shadow-md"
+    className="w-20 h-20 rounded-full object-cover shadow-md"
   />
 </a>
 

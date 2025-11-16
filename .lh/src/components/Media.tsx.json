@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1763304280034,
@@ -12,6 +12,14 @@
                 {
                     "date": 1763306452072,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,18 +63,18 @@\n       <div className=\"grid sm:grid-cols-2 lg:grid-cols-3 gap-8\">\r\n         {mediaItems.map((item, index) => (\r\n           <div\r\n             key={index}\r\n-            className=\"luxury-card overflow-hidden group cursor-pointer animate-fade-in\"\r\n+            className=\"luxury-card overflow-hidden group cursor-pointer animate-fade-in hover:scale-105 hover:shadow-xl transition-all duration-300\"\r\n             style={{ animationDelay: `${index * 100}ms` }}\r\n           >\r\n             <div className=\"relative overflow-hidden\">\r\n               <img\r\n                 src={item.thumbnail}\r\n                 alt={item.title}\r\n                 className=\"w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500\"\r\n               />\r\n-              <div className=\"absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center\">\r\n+              <div className=\"absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300\">\r\n                 <item.icon className=\"w-5 h-5 text-primary\" />\r\n               </div>\r\n             </div>\r\n             <div className=\"p-6\">\r\n"
+                },
+                {
+                    "date": 1763308956911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,16 +7,16 @@\n     title: \"Dr. Haddad on Modern Implantology\",\r\n     source: \"YouTube Interview\",\r\n     thumbnail: \"https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=300&fit=crop\",\r\n   },\r\n+//   {\r\n+//     type: \"article\",\r\n+//     icon: Newspaper,\r\n+//     title: \"The Future of Digital Dentistry\",\r\n+//     source: \"Dental Tribune\",\r\n+//     thumbnail: \"https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop\",\r\n+//   },\r\n   {\r\n-    type: \"article\",\r\n-    icon: Newspaper,\r\n-    title: \"The Future of Digital Dentistry\",\r\n-    source: \"Dental Tribune\",\r\n-    thumbnail: \"https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop\",\r\n-  },\r\n-  {\r\n     type: \"social\",\r\n     icon: Instagram,\r\n     title: \"Patient Smile Stories\",\r\n     source: \"Instagram @bloomdental\",\r\n"
+                },
+                {
+                    "date": 1763308963716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,15 +35,15 @@\n     title: \"Clinic Tour: Behind the Scenes\",\r\n     source: \"YouTube\",\r\n     thumbnail: \"https://images.unsplash.com/photo-1629909615184-74f495363b67?w=400&h=300&fit=crop\",\r\n   },\r\n-  {\r\n-    type: \"social\",\r\n-    icon: Instagram,\r\n-    title: \"Testimonial: Complete Smile Makeover\",\r\n-    source: \"Instagram\",\r\n-    thumbnail: \"https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop\",\r\n-  },\r\n+//   {\r\n+//     type: \"social\",\r\n+//     icon: Instagram,\r\n+//     title: \"Testimonial: Complete Smile Makeover\",\r\n+//     source: \"Instagram\",\r\n+//     thumbnail: \"https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop\",\r\n+//   },\r\n ];\r\n \r\n export default function Media() {\r\n   return (\r\n"
                 }
             ],
             "date": 1763304280034,

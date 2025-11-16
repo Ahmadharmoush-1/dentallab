@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
-import DigitalDentistry from "@/components/DigitalDentistry";
+// import DigitalDentistry from "@/components/DigitalDentistry";
 import DentalLab from "@/components/DentalLab";
 import Team from "@/components/Team";
 import PatientCases from "@/components/PatientCases";
@@ -19,7 +19,7 @@ const Index = () => {
       <Hero />
       <About />
       <Services />
-      <DigitalDentistry />
+      {/* <DigitalDentistry /> */}
       <DentalLab />
       <Team />
       <PatientCases />
