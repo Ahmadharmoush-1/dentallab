@@ -39,11 +39,16 @@ export default function Navigation() {
           isScrolled ? "h-16" : "h-20"
         }`}>
           {/* Logo */}
-          <a href="#home" className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300">
-            <div className="text-2xl font-bold text-primary">
-              Bloom<span className="text-accent">.Dental</span>
-            </div>
-          </a>
+          <a
+  href="#home"
+  className="flex items-center hover:scale-105 transition-transform duration-300"
+>
+  <img
+    src="/photos/logo.jpg"   // <-- your logo path
+    alt="Bloom Dental Logo"
+    className="w-20 h-20 object-contain rounded-full"
+  />
+</a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
