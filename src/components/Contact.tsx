@@ -171,12 +171,12 @@ export default function Contact() {
                   Beirut: +961 1 123 456
                 </a>
                 <br />
-                <a
+                {/* <a
                   href="tel:+97141234567"
                   className="text-accent hover:text-accent/80 font-semibold"
                 >
                   Dubai: +971 4 123 4567
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
