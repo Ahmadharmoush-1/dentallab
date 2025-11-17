@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1763304212956,
@@ -24,6 +24,10 @@
                 {
                     "date": 1763372176711,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         <h2 className=\"text-4xl md:text-5xl font-bold text-primary mt-4 mb-6\">\r\n           The Clinic\r\n         </h2>\r\n         <p className=\"text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed\">\r\n-          At Bloom Dental Clinic, we believe that exceptional dental care goes beyond treatment. \r\n+          At Saade Dental Clinic, we believe that exceptional dental care goes beyond treatment. \r\n           We combine luxury, comfort, and cutting-edge technology to create a transformative experience \r\n           for every patient. Our philosophy is simple: perfection in every smile, comfort in every visit.\r\n         </p>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1763373181416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         <h2 className=\"text-4xl md:text-5xl font-bold text-primary mt-4 mb-6\">\r\n           The Clinic\r\n         </h2>\r\n         <p className=\"text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed\">\r\n-          At Saade Dental Clinic, we believe that exceptional dental care goes beyond treatment. \r\n+          At Asmar Dental Clinic, we believe that exceptional dental care goes beyond treatment. \r\n           We combine luxury, comfort, and cutting-edge technology to create a transformative experience \r\n           for every patient. Our philosophy is simple: perfection in every smile, comfort in every visit.\r\n         </p>\r\n       </div>\r\n"
                 }
             ],
             "date": 1763304212955,

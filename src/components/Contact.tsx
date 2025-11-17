@@ -219,10 +219,10 @@ export default function Contact() {
                   Send us your questions anytime
                 </p>
                 <a
-                  href="mailto:info@saadedental.lb"
+                  href="mailto:info@Asmardental.lb"
                   className="text-accent hover:text-accent/80 font-semibold"
                 >
-                  info@saadedental.lb
+                  info@Asmardental.lb
                 </a>
               </div>
             </div>

@@ -34,7 +34,7 @@ export default function About() {
           The Clinic
         </h2>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          At Saade Dental Clinic, we believe that exceptional dental care goes beyond treatment. 
+          At Asmar Dental Clinic, we believe that exceptional dental care goes beyond treatment. 
           We combine luxury, comfort, and cutting-edge technology to create a transformative experience 
           for every patient. Our philosophy is simple: perfection in every smile, comfort in every visit.
         </p>

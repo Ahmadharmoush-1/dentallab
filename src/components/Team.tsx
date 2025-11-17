@@ -4,13 +4,13 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "./ui/button";
 
 const teamMembers = [{
-  name: "Dr. Joseph Saade",
-  specialty: "Implantologist - Prosthodontist - Oral Surgeon",
+  name: "Dr. Edward Henri El Asmar",
+  specialty: "Orthodontist & Dentofacial Orthopedist",
   bio: "Dedicated to children’s oral health, providing gentle, child-friendly treatments. Experienced in behavior management, dental growth monitoring, and preventive pediatric care.",
   image: "/photos/DrCHLOE.png",
 },{
-  name: "Dr. Mohammad Qaddoumi",
-  specialty: "Orthodontist",
+  name: "Dr. Eliana El Asmar ",
+  specialty: "Orthodontist & Dentofacial Orthopedist",
   bio: "Specialized in orthodontic treatments including braces, clear aligners, and bite correction. Focused on achieving functional, aesthetic, and long-lasting smile alignment.",
   image: "/photos/DrMARC.png",
 },
