@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Mail, Phone, MessageCircle } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -8,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 
 export default function Contact() {
   const { toast } = useToast();
+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -44,8 +46,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section-container">
-      <div className="text-center mb-16 animate-fade-in">
+    <section ref={sectionRef} id="contact" className="section-container">
+      <div className={`text-center mb-16 transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}>
         <span className="text-accent font-semibold text-sm uppercase tracking-wider">
           Get in Touch
         </span>
@@ -59,7 +63,9 @@ export default function Contact() {
 
       <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
         {/* Contact Form */}
-        <div className="luxury-card p-8 animate-fade-in">
+        <div className={`luxury-card p-8 transition-all duration-1000 ${
+          isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+        }`}>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-sm font-semibold text-primary mb-2">
@@ -136,17 +142,19 @@ export default function Contact() {
               />
             </div>
 
-            <Button type="submit" className="w-full luxury-button" size="lg">
+            <Button type="submit" className="w-full luxury-button button-glow" size="lg">
               Send Message
             </Button>
           </form>
         </div>
 
         {/* Quick Contact Options */}
-        <div className="space-y-6 animate-fade-in" style={{ animationDelay: "200ms" }}>
-          <div className="luxury-card p-8">
+        <div className={`space-y-6 transition-all duration-1000 delay-200 ${
+          isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+        }`}>
+          <div className="luxury-card p-8 hover:scale-105 hover:shadow-xl transition-all duration-300">
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                 <Phone className="w-6 h-6 text-accent" />
               </div>
               <div>
@@ -163,19 +171,19 @@ export default function Contact() {
                   Beirut: +961 1 123 456
                 </a>
                 <br />
-                {/* <a
+                <a
                   href="tel:+97141234567"
                   className="text-accent hover:text-accent/80 font-semibold"
                 >
                   Dubai: +971 4 123 4567
-                </a> */}
+                </a>
               </div>
             </div>
           </div>
 
-          <div className="luxury-card p-8">
+          <div className="luxury-card p-8 hover:scale-105 hover:shadow-xl transition-all duration-300">
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                 <MessageCircle className="w-6 h-6 text-green-600" />
               </div>
               <div>
@@ -198,9 +206,9 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="luxury-card p-8">
+          <div className="luxury-card p-8 hover:scale-105 hover:shadow-xl transition-all duration-300">
             <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                 <Mail className="w-6 h-6 text-accent" />
               </div>
               <div>

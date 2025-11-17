@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Sparkles, Heart, Smile, Baby, FileText, Layers, AlignHorizontalJustifyCenter, Activity } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
 import { Button } from "./ui/button";
 
@@ -64,10 +65,13 @@ const services = [
 
 export default function Services() {
   const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section id="services" className="section-container">
-      <div className="text-center mb-16 animate-fade-in">
+    <section ref={sectionRef} id="services" className="section-container">
+      <div className={`text-center mb-16 transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}>
         <span className="text-accent font-semibold text-sm uppercase tracking-wider">
           Our Services
         </span>
@@ -86,11 +90,10 @@ export default function Services() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="luxury-card p-6 cursor-pointer group min-w-[280px] snap-center animate-fade-in hover:scale-105 transition-all duration-300"
-                style={{ animationDelay: `${index * 50}ms` }}
+                className="luxury-card p-6 cursor-pointer group min-w-[280px] snap-center hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
                 onClick={() => setSelectedService(service)}
               >
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-primary mb-2 group-hover:text-accent transition-colors">
@@ -113,11 +116,15 @@ export default function Services() {
         {services.map((service, index) => (
           <div
             key={index}
-            className="luxury-card p-6 cursor-pointer group animate-fade-in hover:scale-105 transition-all duration-300"
-            style={{ animationDelay: `${index * 50}ms` }}
+            className={`luxury-card p-6 cursor-pointer group hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+            style={{ 
+              transitionDelay: isVisible ? `${index * 75}ms` : "0ms"
+            }}
             onClick={() => setSelectedService(service)}
           >
-            <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+            <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
               <service.icon className="w-7 h-7 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-primary mb-2 group-hover:text-accent transition-colors">
@@ -144,7 +151,7 @@ export default function Services() {
           </DialogHeader>
           <div className="mt-6">
             <Button
-              className="w-full luxury-button"
+              className="w-full luxury-button button-glow"
               onClick={() => {
                 setSelectedService(null);
                 window.location.href = "#contact";

@@ -28,23 +28,22 @@ export default function Navigation() {
 
   return (
     <nav
-       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 animate-fade-in ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 animate-fade-in ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-lg shadow-[var(--shadow-soft)]"
-          : "bg-transparent"
+          ? "bg-background/95 backdrop-blur-lg shadow-[var(--shadow-soft)] py-2"
+          : "bg-transparent py-0"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className={`flex justify-between items-center transition-all duration-500 ${
+          isScrolled ? "h-16" : "h-20"
+        }`}>
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300">
-  <img
-    src="/photos/logo.jpg"
-    alt="Bloom Dental Logo"
-    className="w-20 h-20 rounded-full object-cover shadow-md"
-  />
-</a>
-
+            <div className="text-2xl font-bold text-primary">
+              Bloom<span className="text-accent">.Dental</span>
+            </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
@@ -60,7 +59,7 @@ export default function Navigation() {
             ))}
             <Button
               variant="default"
-              className="ml-4 luxury-button"
+              className="ml-4 luxury-button button-glow"
               onClick={() => (window.location.href = "#contact")}
             >
               Book Now

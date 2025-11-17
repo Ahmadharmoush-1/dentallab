@@ -1,12 +1,21 @@
 import { ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 // import heroImage from "@/assets/hero-dental-clinic.jpg";
 
 export default function Hero() {
+   const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 animate-fade-in">
+        
        <img
   src="/photos/dentalview.jpg"   // <-- put your image path here
   alt="Bloom Dental Clinic"
@@ -15,7 +24,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
       </div>
 
-       {/* Content */}
+      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         <div className="max-w-3xl">
           <div className="mb-6 inline-block animate-fade-in" style={{ animationDelay: "200ms" }}>
@@ -35,17 +44,17 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "800ms" }}>
             <Button
               size="lg"
-              className="luxury-button text-lg px-8 py-6 group hover:scale-105 transition-all duration-300"
+              className="luxury-button button-glow text-lg px-8 py-6 group hover:scale-110 transition-all duration-300"
               onClick={() => (window.location.href = "#clinic")}
             >
               Explore the Clinic
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform duration-300" />
             </Button>
             
             <Button
               size="lg"
               variant="outline"
-              className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:scale-105 transition-all duration-300"
+              className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 hover:scale-110 hover:border-white/50 transition-all duration-300"
               onClick={() => (window.location.href = "#contact")}
             >
               Book Appointment

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "./ui/button";
 
 const cases = [
@@ -31,6 +32,7 @@ const cases = [
 
 export default function PatientCases() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   const next = () => {
     setCurrentIndex((prev) => (prev + 1) % cases.length);
@@ -43,8 +45,10 @@ export default function PatientCases() {
   const currentCase = cases[currentIndex];
 
   return (
-    <section className="section-container">
-      <div className="text-center mb-16 animate-fade-in">
+    <section ref={sectionRef} className="section-container">
+      <div className={`text-center mb-16 transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}>
         <span className="text-accent font-semibold text-sm uppercase tracking-wider">
           Results
         </span>
@@ -57,10 +61,12 @@ export default function PatientCases() {
       </div>
 
       <div className="max-w-5xl mx-auto">
-        <div className="luxury-card p-8 animate-fade-in">
+        <div className={`luxury-card p-8 transition-all duration-1000 delay-200 ${
+          isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
+        }`}>
           {/* Before/After Images */}
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <div>
+            <div className="image-hover-zoom">
               <p className="text-sm font-semibold text-muted-foreground mb-3 uppercase tracking-wider">
                 Before
               </p>
@@ -70,7 +76,7 @@ export default function PatientCases() {
                 className="w-full h-64 object-cover rounded-lg"
               />
             </div>
-            <div>
+            <div className="image-hover-zoom">
               <p className="text-sm font-semibold text-accent mb-3 uppercase tracking-wider">
                 After
               </p>
@@ -96,7 +102,7 @@ export default function PatientCases() {
               variant="outline"
               size="icon"
               onClick={prev}
-              className="rounded-full"
+              className="rounded-full hover:scale-110 hover:shadow-lg transition-all duration-300"
             >
               <ChevronLeft className="w-5 h-5" />
             </Button>
@@ -106,10 +112,10 @@ export default function PatientCases() {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
+                  className={`rounded-full transition-all duration-300 ${
                     index === currentIndex
-                      ? "bg-accent w-8"
-                      : "bg-muted-foreground/30"
+                      ? "bg-accent w-8 h-2"
+                      : "bg-muted-foreground/30 w-2 h-2 hover:bg-muted-foreground/50"
                   }`}
                 />
               ))}
@@ -119,7 +125,7 @@ export default function PatientCases() {
               variant="outline"
               size="icon"
               onClick={next}
-              className="rounded-full"
+              className="rounded-full hover:scale-110 hover:shadow-lg transition-all duration-300"
             >
               <ChevronRight className="w-5 h-5" />
             </Button>

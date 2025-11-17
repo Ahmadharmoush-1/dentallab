@@ -138,7 +138,22 @@ All colors MUST be HSL.
   }
 
   .luxury-button {
-    @apply bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--gold-light))] text-primary font-semibold rounded-lg shadow-[var(--shadow-gold)] hover:scale-105 transition-[var(--transition-smooth)];
+    @apply bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--gold-light))] text-primary font-semibold rounded-lg shadow-[var(--shadow-gold)] hover:scale-105 hover:shadow-[var(--shadow-strong)] transition-[var(--transition-smooth)] relative overflow-hidden;
+  }
+
+  .luxury-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+  }
+
+  .luxury-button:hover::before {
+    left: 100%;
   }
 
   .section-container {
@@ -151,6 +166,47 @@ All colors MUST be HSL.
 
   .gradient-accent {
     background: var(--gradient-accent);
+  }
+
+  /* Scroll animations */
+  .scroll-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .scroll-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Image hover effects */
+  .image-hover-zoom {
+    @apply overflow-hidden rounded-xl;
+  }
+
+  .image-hover-zoom img {
+    @apply transition-transform duration-700 ease-out;
+  }
+
+  .image-hover-zoom:hover img {
+    @apply scale-110;
+  }
+
+  /* Button glow effect */
+  .button-glow {
+    @apply relative;
+    box-shadow: 0 0 20px rgba(218, 165, 32, 0.3);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .button-glow:hover {
+    box-shadow: 0 0 30px rgba(218, 165, 32, 0.6), 0 0 40px rgba(218, 165, 32, 0.4);
+  }
+
+  /* Parallax effect */
+  .parallax {
+    transition: transform 0.1s ease-out;
   }
 
   /* Hide scrollbar for horizontal scroll */

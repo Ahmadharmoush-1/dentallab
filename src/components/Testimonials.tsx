@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const testimonials = [
   {
@@ -28,9 +29,13 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section className="section-container">
-      <div className="text-center mb-16 animate-fade-in">
+    <section ref={sectionRef} className="section-container">
+      <div className={`text-center mb-16 transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}>
         <span className="text-accent font-semibold text-sm uppercase tracking-wider">
           Testimonials
         </span>
@@ -46,8 +51,12 @@ export default function Testimonials() {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="luxury-card p-8 animate-fade-in hover:scale-105 hover:shadow-xl transition-all duration-300"
-            style={{ animationDelay: `${index * 100}ms` }}
+            className={`luxury-card p-8 hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+            style={{ 
+              transitionDelay: isVisible ? `${index * 150}ms` : "0ms"
+            }}
           >
             {/* Stars */}
             <div className="flex mb-4 gap-1">

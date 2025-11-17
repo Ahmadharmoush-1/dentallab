@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "./ui/button";
 
 const teamMembers = [
@@ -38,6 +39,7 @@ const teamMembers = [
 
 export default function Team() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   const next = () => {
     setCurrentIndex((prev) => (prev + 1) % teamMembers.length);
@@ -56,8 +58,10 @@ export default function Team() {
   };
 
   return (
-    <section id="team" className="section-container bg-secondary/30">
-      <div className="text-center mb-16 animate-fade-in">
+    <section ref={sectionRef} id="team" className="section-container bg-secondary/30">
+      <div className={`text-center mb-16 transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}>
         <span className="text-accent font-semibold text-sm uppercase tracking-wider">
           Our Experts
         </span>
@@ -77,13 +81,12 @@ export default function Team() {
               {teamMembers.map((member, index) => (
                 <div
                   key={member.name}
-                  className="luxury-card p-8 text-center min-w-[300px] snap-center animate-fade-in hover:scale-105 transition-all duration-300"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="luxury-card p-8 text-center min-w-[300px] snap-center hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
                 >
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-accent/20 transition-transform hover:scale-110">
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-accent/20 transition-all duration-500 hover:scale-110 hover:border-accent/40 hover:shadow-lg">
                     <img
                       src={member.image}
-                      alt={member.name}
+                      alt={`${member.name} - ${member.specialty}`}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -107,13 +110,17 @@ export default function Team() {
             {getVisibleMembers().map((member, index) => (
               <div
                 key={`${member.name}-${index}`}
-                className="luxury-card p-8 text-center animate-fade-in hover:scale-105 transition-all duration-300"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className={`luxury-card p-8 text-center hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
+                style={{ 
+                  transitionDelay: isVisible ? `${index * 150}ms` : "0ms"
+                }}
               >
-                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-accent/20 transition-transform hover:scale-110">
+                <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-accent/20 transition-all duration-500 hover:scale-110 hover:border-accent/40 hover:shadow-lg">
                   <img
                     src={member.image}
-                    alt={member.name}
+                    alt={`${member.name} - ${member.specialty}`}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -132,7 +139,7 @@ export default function Team() {
               variant="outline"
               size="icon"
               onClick={prev}
-              className="rounded-full w-12 h-12 hover:scale-110 transition-transform"
+              className="rounded-full w-12 h-12 hover:scale-110 hover:shadow-lg transition-all duration-300"
             >
               <ChevronLeft className="w-5 h-5" />
             </Button>
@@ -142,10 +149,10 @@ export default function Team() {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
+                  className={`rounded-full transition-all duration-300 ${
                     index === currentIndex
-                      ? "bg-accent w-8"
-                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                      ? "bg-accent w-8 h-2"
+                      : "bg-muted-foreground/30 w-2 h-2 hover:bg-muted-foreground/50"
                   }`}
                 />
               ))}
@@ -155,7 +162,7 @@ export default function Team() {
               variant="outline"
               size="icon"
               onClick={next}
-              className="rounded-full w-12 h-12 hover:scale-110 transition-transform"
+              className="rounded-full w-12 h-12 hover:scale-110 hover:shadow-lg transition-all duration-300"
             >
               <ChevronRight className="w-5 h-5" />
             </Button>
