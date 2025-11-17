@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 7,
             "patches": [
                 {
                     "date": 1763304280034,
@@ -32,6 +32,10 @@
                 {
                     "date": 1763370874162,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,16 +8,16 @@\n     title: \"Dr. Haddad on Modern Implantology\",\r\n     source: \"YouTube Interview\",\r\n     thumbnail: \"https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=300&fit=crop\",\r\n   },\r\n+  // {\r\n+  //   type: \"article\",\r\n+  //   icon: Newspaper,\r\n+  //   title: \"The Future of Digital Dentistry\",\r\n+  //   source: \"Dental Tribune\",\r\n+  //   thumbnail: \"https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop\",\r\n+  // },\r\n   {\r\n-    type: \"article\",\r\n-    icon: Newspaper,\r\n-    title: \"The Future of Digital Dentistry\",\r\n-    source: \"Dental Tribune\",\r\n-    thumbnail: \"https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop\",\r\n-  },\r\n-  {\r\n     type: \"social\",\r\n     icon: Instagram,\r\n     title: \"Patient Smile Stories\",\r\n     source: \"Instagram @bloomdental\",\r\n"
+                },
+                {
+                    "date": 1763371294497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const mediaItems = [\r\n   {\r\n     type: \"video\",\r\n     icon: Video,\r\n-    title: \"Dr. Haddad on Modern Implantology\",\r\n+    title: \"Dr.  on Modern Implantology\",\r\n     source: \"YouTube Interview\",\r\n     thumbnail: \"https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=300&fit=crop\",\r\n   },\r\n   // {\r\n@@ -36,15 +36,15 @@\n     title: \"Clinic Tour: Behind the Scenes\",\r\n     source: \"YouTube\",\r\n     thumbnail: \"https://images.unsplash.com/photo-1629909615184-74f495363b67?w=400&h=300&fit=crop\",\r\n   },\r\n-  {\r\n-    type: \"social\",\r\n-    icon: Instagram,\r\n-    title: \"Testimonial: Complete Smile Makeover\",\r\n-    source: \"Instagram\",\r\n-    thumbnail: \"https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop\",\r\n-  },\r\n+  // {\r\n+  //   type: \"social\",\r\n+  //   icon: Instagram,\r\n+  //   title: \"Testimonial: Complete Smile Makeover\",\r\n+  //   source: \"Instagram\",\r\n+  //   thumbnail: \"https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop\",\r\n+  // },\r\n ];\r\n \r\n export default function Media() {\r\n   const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });\r\n"
                 }
             ],
             "date": 1763304280034,
