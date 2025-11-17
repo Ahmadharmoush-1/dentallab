@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1763304280034,
@@ -36,6 +36,14 @@
                 {
                     "date": 1763371294497,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const mediaItems = [\r\n   {\r\n     type: \"video\",\r\n     icon: Video,\r\n-    title: \"Dr. Haddad on Modern Implantology\",\r\n+    title: \"Dr.  on Modern Implantology\",\r\n     source: \"YouTube Interview\",\r\n     thumbnail: \"https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=300&fit=crop\",\r\n   },\r\n   // {\r\n@@ -36,15 +36,15 @@\n     title: \"Clinic Tour: Behind the Scenes\",\r\n     source: \"YouTube\",\r\n     thumbnail: \"https://images.unsplash.com/photo-1629909615184-74f495363b67?w=400&h=300&fit=crop\",\r\n   },\r\n-  {\r\n-    type: \"social\",\r\n-    icon: Instagram,\r\n-    title: \"Testimonial: Complete Smile Makeover\",\r\n-    source: \"Instagram\",\r\n-    thumbnail: \"https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop\",\r\n-  },\r\n+  // {\r\n+  //   type: \"social\",\r\n+  //   icon: Instagram,\r\n+  //   title: \"Testimonial: Complete Smile Makeover\",\r\n+  //   source: \"Instagram\",\r\n+  //   thumbnail: \"https://images.unsplash.com/photo-1609619385002-f40f670ecda5?w=400&h=300&fit=crop\",\r\n+  // },\r\n ];\r\n \r\n export default function Media() {\r\n   const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });\r\n"
+                },
+                {
+                    "date": 1763372269370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   {\r\n     type: \"social\",\r\n     icon: Instagram,\r\n     title: \"Patient Smile Stories\",\r\n-    source: \"Instagram @bloomdental\",\r\n+    source: \"Instagram @saadedental\",\r\n     thumbnail: \"https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=300&fit=crop\",\r\n   },\r\n   {\r\n     type: \"article\",\r\n"
+                },
+                {
+                    "date": 1763372277103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n         <h2 className=\"text-4xl md:text-5xl font-bold text-primary mt-4 mb-6\">\r\n           In the News\r\n         </h2>\r\n         <p className=\"text-lg text-muted-foreground max-w-3xl mx-auto\">\r\n-          Featured articles, interviews, and social media highlights from Bloom Dental\r\n+          Featured articles, interviews, and social media highlights from Saade Dental\r\n         </p>\r\n       </div>\r\n \r\n       <div className=\"grid sm:grid-cols-2 lg:grid-cols-3 gap-8\">\r\n"
                 }
             ],
             "date": 1763304280034,

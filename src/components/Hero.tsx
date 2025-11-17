@@ -34,7 +34,7 @@ export default function Hero() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in" style={{ animationDelay: "400ms" }}>
-            Bloom Dental Clinic<span className="text-accent">.lb</span>
+            Saade Dental Clinic<span className="text-accent">.lb</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: "600ms" }}>

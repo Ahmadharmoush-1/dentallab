@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1763304326429,
@@ -16,6 +16,10 @@
                 {
                     "date": 1763370973560,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { Star } from \"lucide-react\";\r\n+import { useScrollAnimation } from \"@/hooks/useScrollAnimation\";\r\n \r\n const testimonials = [\r\n   {\r\n     name: \"Sarah M.\",\r\n@@ -27,11 +28,15 @@\n   },\r\n ];\r\n \r\n export default function Testimonials() {\r\n+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });\r\n+\r\n   return (\r\n-    <section className=\"section-container\">\r\n-      <div className=\"text-center mb-16 animate-fade-in\">\r\n+    <section ref={sectionRef} className=\"section-container\">\r\n+      <div className={`text-center mb-16 transition-all duration-1000 ${\r\n+        isVisible ? \"opacity-100 translate-y-0\" : \"opacity-0 translate-y-10\"\r\n+      }`}>\r\n         <span className=\"text-accent font-semibold text-sm uppercase tracking-wider\">\r\n           Testimonials\r\n         </span>\r\n         <h2 className=\"text-4xl md:text-5xl font-bold text-primary mt-4 mb-6\">\r\n@@ -45,10 +50,14 @@\n       <div className=\"grid md:grid-cols-2 gap-8\">\r\n         {testimonials.map((testimonial, index) => (\r\n           <div\r\n             key={index}\r\n-            className=\"luxury-card p-8 animate-fade-in hover:scale-105 hover:shadow-xl transition-all duration-300\"\r\n-            style={{ animationDelay: `${index * 100}ms` }}\r\n+            className={`luxury-card p-8 hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ${\r\n+              isVisible ? \"opacity-100 translate-y-0\" : \"opacity-0 translate-y-10\"\r\n+            }`}\r\n+            style={{ \r\n+              transitionDelay: isVisible ? `${index * 150}ms` : \"0ms\"\r\n+            }}\r\n           >\r\n             {/* Stars */}\r\n             <div className=\"flex mb-4 gap-1\">\r\n               {[...Array(testimonial.rating)].map((_, i) => (\r\n"
+                },
+                {
+                    "date": 1763372308198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const testimonials = [\r\n   {\r\n     name: \"Sarah M.\",\r\n     rating: 5,\r\n-    text: \"Bloom Dental transformed my smile beyond my expectations. The team was professional, caring, and the results are stunning. I finally have the confidence to smile freely!\",\r\n+    text: \"Saade Dental transformed my smile beyond my expectations. The team was professional, caring, and the results are stunning. I finally have the confidence to smile freely!\",\r\n     treatment: \"Veneers & Whitening\",\r\n   },\r\n   {\r\n     name: \"Ahmed K.\",\r\n"
                 }
             ],
             "date": 1763304326429,

@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="text-2xl font-bold mb-4">
-              Bloom<span className="text-accent">.Dental</span>
+              Saade<span className="text-accent">Dental</span>
             </div>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
               Premium dental care with luxury service, advanced technology, and expert specialists.
@@ -97,8 +97,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-accent flex-shrink-0" />
-                <a href="mailto:beirut@bloomdental.lb" className="hover:text-accent">
-                  beirut@bloomdental.lb
+                <a href="mailto:beirut@saadedental.lb" className="hover:text-accent">
+                  beirut@saadedental.lb
                 </a>
               </li>
             </ul>
@@ -131,7 +131,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-white/60 text-sm">
-            © 2025 Bloom Dental Clinic. All rights reserved.
+            © 2025 Saade Dental Clinic. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-white/60">
             <a href="#" className="hover:text-accent transition-colors">

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1763304212956,
@@ -20,6 +20,10 @@
                 {
                     "date": 1763370621651,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,15 @@\n   },\r\n ];\r\n \r\n export default function About() {\r\n+  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });\r\n+\r\n   return (\r\n-    <section id=\"clinic\" className=\"section-container bg-secondary/30\">\r\n-      <div className=\"text-center mb-16 animate-fade-in\">\r\n+    <section ref={sectionRef} id=\"clinic\" className=\"section-container bg-secondary/30\">\r\n+      <div className={`text-center mb-16 transition-all duration-1000 ${\r\n+        isVisible ? \"opacity-100 translate-y-0\" : \"opacity-0 translate-y-10\"\r\n+      }`}>\r\n         <span className=\"text-accent font-semibold text-sm uppercase tracking-wider\">\r\n           About Us\r\n         </span>\r\n         <h2 className=\"text-4xl md:text-5xl font-bold text-primary mt-4 mb-6\">\r\n@@ -39,12 +43,16 @@\n       <div className=\"grid md:grid-cols-3 gap-8 mt-12\">\r\n         {features.map((feature, index) => (\r\n           <div\r\n             key={index}\r\n-            className=\"luxury-card p-8 text-center hover:scale-105 hover:shadow-xl transition-all duration-300 animate-fade-in\"\r\n-            style={{ animationDelay: `${index * 150}ms` }}\r\n+            className={`luxury-card p-8 text-center group hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ${\r\n+              isVisible ? \"opacity-100 translate-y-0\" : \"opacity-0 translate-y-10\"\r\n+            }`}\r\n+            style={{ \r\n+              transitionDelay: isVisible ? `${index * 150}ms` : \"0ms\"\r\n+            }}\r\n           >\r\n-            <div className=\"w-16 h-16 mx-auto mb-6 bg-accent/10 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300\">\r\n+            <div className=\"w-16 h-16 mx-auto mb-6 bg-accent/10 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-500\">\r\n               <feature.icon className=\"w-8 h-8 text-accent\" />\r\n             </div>\r\n             <h3 className=\"text-xl font-semibold text-primary mb-3\">\r\n               {feature.title}\r\n@@ -57,4 +65,5 @@\n       </div>\r\n     </section>\r\n   );\r\n }\r\n+\r\n"
+                },
+                {
+                    "date": 1763372176711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         <h2 className=\"text-4xl md:text-5xl font-bold text-primary mt-4 mb-6\">\r\n           The Clinic\r\n         </h2>\r\n         <p className=\"text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed\">\r\n-          At Bloom Dental Clinic, we believe that exceptional dental care goes beyond treatment. \r\n+          At Saade Dental Clinic, we believe that exceptional dental care goes beyond treatment. \r\n           We combine luxury, comfort, and cutting-edge technology to create a transformative experience \r\n           for every patient. Our philosophy is simple: perfection in every smile, comfort in every visit.\r\n         </p>\r\n       </div>\r\n"
                 }
             ],
             "date": 1763304212955,

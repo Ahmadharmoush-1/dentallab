@@ -219,10 +219,10 @@ export default function Contact() {
                   Send us your questions anytime
                 </p>
                 <a
-                  href="mailto:info@bloomdental.lb"
+                  href="mailto:info@saadedental.lb"
                   className="text-accent hover:text-accent/80 font-semibold"
                 >
-                  info@bloomdental.lb
+                  info@saadedental.lb
                 </a>
               </div>
             </div>

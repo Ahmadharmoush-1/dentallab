@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: "Sarah M.",
     rating: 5,
-    text: "Bloom Dental transformed my smile beyond my expectations. The team was professional, caring, and the results are stunning. I finally have the confidence to smile freely!",
+    text: "Saade Dental transformed my smile beyond my expectations. The team was professional, caring, and the results are stunning. I finally have the confidence to smile freely!",
     treatment: "Veneers & Whitening",
   },
   {

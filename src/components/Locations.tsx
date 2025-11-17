@@ -6,9 +6,9 @@ const locations = [
   {
     city: "Beirut",
     country: "Lebanon",
-    address: "Kouyoumji Center , Bloc A , Floor 8",
+    address: "Sin el Fil",
     phone: "+961 1 123 456",
-    email: "beirut@bloomdental.lb",
+    email: "beirut@saadedental.lb",
     hours: "Mon-Fri: 9:00 AM - 7:00 PM\nSat: 10:00 AM - 4:00 PM",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.2299804808914!2d35.50953731521013!3d33.88863338065076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f17215880a78f%3A0x729182bae99836b4!2sBeirut%2C%20Lebanon!5e0!3m2!1sen!2s!4v1234567890",
   },

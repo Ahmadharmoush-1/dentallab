@@ -3,31 +3,31 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "./ui/button";
 
-const teamMembers = [
-  {
-  name: "Dr. Nicolas Sakr",
-  specialty: "Prosthodontist",
-  bio: "Expert in prosthodontic rehabilitation including crowns, bridges, veneers, and full-mouth restorations. Specialized in digital smile design and advanced implant prosthetics.",
-  image: "/photos/DrNICOLAS.png",
-},
-{
-  name: "Dr. Sara Chehab",
-  specialty: "Endodontology Specialist",
-  bio: "Specialist in root canal therapy and endodontic microsurgery. Utilizes state-of-the-art rotary systems, CBCT diagnostics, and modern pain-free treatment techniques.",
-  image: "/photos/DrSARA.png",
-},
-{
-  name: "Dr. Chloe Haddad",
-  specialty: "Pediatric Dentist",
+const teamMembers = [{
+  name: "Dr. Joseph Saade",
+  specialty: "Implantologist - Prosthodontist - Oral Surgeon",
   bio: "Dedicated to children’s oral health, providing gentle, child-friendly treatments. Experienced in behavior management, dental growth monitoring, and preventive pediatric care.",
   image: "/photos/DrCHLOE.png",
-},
-{
-  name: "Dr. Marc Abou Nahed",
+},{
+  name: "Dr. Mohammad Qaddoumi",
   specialty: "Orthodontist",
   bio: "Specialized in orthodontic treatments including braces, clear aligners, and bite correction. Focused on achieving functional, aesthetic, and long-lasting smile alignment.",
   image: "/photos/DrMARC.png",
 },
+//   {
+//   name: "Dr. Nicolas Sakr",
+//   specialty: "Prosthodontist",
+//   bio: "Expert in prosthodontic rehabilitation including crowns, bridges, veneers, and full-mouth restorations. Specialized in digital smile design and advanced implant prosthetics.",
+//   image: "/photos/DrNICOLAS.png",
+// },
+// {
+//   name: "Dr. Sara Chehab",
+//   specialty: "Endodontology Specialist",
+//   bio: "Specialist in root canal therapy and endodontic microsurgery. Utilizes state-of-the-art rotary systems, CBCT diagnostics, and modern pain-free treatment techniques.",
+//   image: "/photos/DrSARA.png",
+// },
+
+
 
 //   {
 //     name: "Dr. Sara Badran",

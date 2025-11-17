@@ -20,7 +20,7 @@ const mediaItems = [
     type: "social",
     icon: Instagram,
     title: "Patient Smile Stories",
-    source: "Instagram @bloomdental",
+    source: "Instagram @saadedental",
     thumbnail: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=300&fit=crop",
   },
   {
@@ -61,7 +61,7 @@ export default function Media() {
           In the News
         </h2>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-          Featured articles, interviews, and social media highlights from Bloom Dental
+          Featured articles, interviews, and social media highlights from Saade Dental
         </p>
       </div>
 
