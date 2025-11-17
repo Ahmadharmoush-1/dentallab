@@ -6,7 +6,7 @@ const locations = [
   {
     city: "Beirut",
     country: "Lebanon",
-    address: "ABC Mall, Achrafieh, Beirut",
+    address: "Kouyoumji Center , Bloc A , Floor 8",
     phone: "+961 1 123 456",
     email: "beirut@bloomdental.lb",
     hours: "Mon-Fri: 9:00 AM - 7:00 PM\nSat: 10:00 AM - 4:00 PM",

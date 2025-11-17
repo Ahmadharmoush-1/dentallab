@@ -87,7 +87,7 @@ export default function Footer() {
             <ul className="space-y-3 text-white/70 text-sm">
               <li className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                <span>ABC Mall, Achrafieh, Beirut, Lebanon</span>
+                <span>Kouyoumji Center , Bloc A , Floor 8</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-accent flex-shrink-0" />
