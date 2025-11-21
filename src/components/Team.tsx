@@ -5,20 +5,23 @@ import { Button } from "./ui/button";
 
 const teamMembers = [  {
   name: "Dr. Fadi Nahas",
-  specialty: "DDS , masters in  Prosthodontics",
-  bio: "Expert in prosthodontic rehabilitation including crowns, bridges, veneers, and full-mouth restorations. Specialized in digital smile design and advanced implant prosthetics.",
+  specialty: "DDS, Masters in Prosthodontics",
+  bio: "Specialist in prosthodontics, offering advanced treatments including crowns, bridges, veneers, implant prosthetics, and full-mouth rehabilitation with a focus on digital smile design.",
   image: "/photos/DrNICOLAS.png",
-},{
+},
+{
   name: "Dr. Lynn Khazzaka",
-  specialty: "DDS , Masters in Endodontics",
-  bio: "Dedicated to children’s oral health, providing gentle, child-friendly treatments. Experienced in behavior management, dental growth monitoring, and preventive pediatric care.",
+  specialty: "DDS, Masters in Endodontics",
+  bio: "Expert in endodontic treatments, including root canal therapy, retreatment, and management of dental pain. Uses modern techniques and advanced imaging for precise, comfortable care.",
   image: "/photos/DrCHLOE.png",
-},{
-  name: "Dr. Wassim El  Sayed",
-  specialty: "DDS , Masters in Orthodontics and Dentofacial Orthopedics - Clinical Instructor LU",
-  bio: "Specialized in orthodontic treatments including braces, clear aligners, and bite correction. Focused on achieving functional, aesthetic, and long-lasting smile alignment.",
+},
+{
+  name: "Dr. Wassim El Sayed",
+  specialty: "DDS, Masters in Orthodontics and Dentofacial Orthopedics - Clinical Instructor LU",
+  bio: "Specialist in orthodontics, providing braces, clear aligners, bite correction, and growth-modification treatments. Focused on achieving functional and aesthetic long-term smile alignment.",
   image: "/photos/DrMARC.png",
 },
+
 
 // {
 //   name: "Dr. Sara Chehab",

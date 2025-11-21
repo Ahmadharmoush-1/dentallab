@@ -20,7 +20,7 @@ const mediaItems = [
     type: "social",
     icon: Instagram,
     title: "Patient Smile Stories",
-    source: "Instagram @Asmardental",
+    source: "Instagram @Nahasdental",
     thumbnail: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=300&fit=crop",
   },
   {
