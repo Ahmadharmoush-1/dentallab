@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1763304280034,
@@ -48,6 +48,10 @@
                 {
                     "date": 1763373212622,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   {\r\n     type: \"social\",\r\n     icon: Instagram,\r\n     title: \"Patient Smile Stories\",\r\n-    source: \"Instagram @saadedental\",\r\n+    source: \"Instagram @Asmardental\",\r\n     thumbnail: \"https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=300&fit=crop\",\r\n   },\r\n   {\r\n     type: \"article\",\r\n@@ -60,9 +60,9 @@\n         <h2 className=\"text-4xl md:text-5xl font-bold text-primary mt-4 mb-6\">\r\n           In the News\r\n         </h2>\r\n         <p className=\"text-lg text-muted-foreground max-w-3xl mx-auto\">\r\n-          Featured articles, interviews, and social media highlights from Saade Dental\r\n+          Featured articles, interviews, and social media highlights from Asmar Dental\r\n         </p>\r\n       </div>\r\n \r\n       <div className=\"grid sm:grid-cols-2 lg:grid-cols-3 gap-8\">\r\n"
+                },
+                {
+                    "date": 1763721515378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n         <h2 className=\"text-4xl md:text-5xl font-bold text-primary mt-4 mb-6\">\r\n           In the News\r\n         </h2>\r\n         <p className=\"text-lg text-muted-foreground max-w-3xl mx-auto\">\r\n-          Featured articles, interviews, and social media highlights from Asmar Dental\r\n+          Featured articles, interviews, and social media highlights from Nahas Dental\r\n         </p>\r\n       </div>\r\n \r\n       <div className=\"grid sm:grid-cols-2 lg:grid-cols-3 gap-8\">\r\n"
                 }
             ],
             "date": 1763304280034,

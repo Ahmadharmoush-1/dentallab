@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="text-2xl font-bold mb-4">
-              Asmar<span className="text-accent">Dental</span>
+              Nahas<span className="text-accent">Dental</span>
             </div>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
               Premium dental care with luxury service, advanced technology, and expert specialists.
@@ -87,7 +87,7 @@ export default function Footer() {
             <ul className="space-y-3 text-white/70 text-sm">
               <li className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                <span>Adlieh – Beirut | Kfarhbab – Ghazir</span>
+                <span>ST Elie Mall Antelias Bloc A</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-accent flex-shrink-0" />
@@ -98,7 +98,7 @@ export default function Footer() {
               <li className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-accent flex-shrink-0" />
                 <a href="mailto:beirut@Asmardental.lb" className="hover:text-accent">
-                  beirut@Asmardental.lb
+                  beirut@Nahasdental.lb
                 </a>
               </li>
             </ul>
@@ -131,7 +131,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-white/60 text-sm">
-            © 2025 Asmar Dental Clinic. All rights reserved.
+            © 2025 Nahas Dental Clinic. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm text-white/60">
             <a href="#" className="hover:text-accent transition-colors">

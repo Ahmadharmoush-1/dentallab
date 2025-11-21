@@ -61,7 +61,7 @@ export default function Media() {
           In the News
         </h2>
         <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-          Featured articles, interviews, and social media highlights from Asmar Dental
+          Featured articles, interviews, and social media highlights from Nahas Dental
         </p>
       </div>
 

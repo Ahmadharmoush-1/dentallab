@@ -2,28 +2,28 @@ import { Wrench, Clock, Scan, Users, Award, Cog } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 // import labImage from "@/assets/dental-lab.jpg";
 
-const labServices = [
-  {
-    icon: Award,
-    title: "Crown & Bridge Production",
-    description: "High-quality ceramic and metal restorations crafted with precision.",
-  },
-  {
-    icon: Cog,
-    title: "Zirconia & E-Max",
-    description: "Premium materials for natural-looking, durable restorations.",
-  },
-  {
-    icon: Wrench,
-    title: "Implant Prosthetics",
-    description: "Custom abutments and crowns for dental implant systems.",
-  },
-  {
-    icon: Scan,
-    title: "Digital Wax-ups",
-    description: "Virtual smile design before final fabrication.",
-  },
-];
+// const labServices = [
+//   {
+//     icon: Award,
+//     title: "Crown & Bridge Production",
+//     description: "High-quality ceramic and metal restorations crafted with precision.",
+//   },
+//   {
+//     icon: Cog,
+//     title: "Zirconia & E-Max",
+//     description: "Premium materials for natural-looking, durable restorations.",
+//   },
+//   {
+//     icon: Wrench,
+//     title: "Implant Prosthetics",
+//     description: "Custom abutments and crowns for dental implant systems.",
+//   },
+//   {
+//     icon: Scan,
+//     title: "Digital Wax-ups",
+//     description: "Virtual smile design before final fabrication.",
+//   },
+// ];
 
 const labAdvantages = [
   { icon: Clock, text: "Fast turnaround times" },
@@ -59,14 +59,15 @@ export default function DentalLab() {
           isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
         }`}>
           <img
-            // src={labImage}
-            alt="State-of-the-art dental laboratory equipment"
-            className="rounded-2xl shadow-[var(--shadow-strong)] w-full h-[400px] object-cover"
-          />
+  src="/photos/NAHAS.png"
+  alt="State-of-the-art dental laboratory equipment"
+  className="rounded-2xl shadow-[var(--shadow-strong)] w-full h-[400px] object-cover"
+/>
+
         </div>
 
         {/* Lab Services */}
-        <div className={`space-y-6 transition-all duration-1000 delay-200 ${
+        {/* <div className={`space-y-6 transition-all duration-1000 delay-200 ${
           isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
         }`}>
           <h3 className="text-2xl font-bold text-primary mb-6">Laboratory Services</h3>
@@ -83,7 +84,7 @@ export default function DentalLab() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
 
       {/* Lab Advantages */}

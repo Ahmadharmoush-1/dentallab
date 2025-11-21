@@ -8,56 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 215 45% 12%;
+    /* Soft light gray background matching logo */
+    --background: 0 0% 85%;
+    --foreground: 0 0% 0%;
 
+    /* Cards with white background for contrast */
     --card: 0 0% 100%;
-    --card-foreground: 215 45% 12%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 45% 12%;
+    --popover-foreground: 0 0% 0%;
 
-    /* Deep navy blue - luxury medical */
-    --primary: 215 55% 15%;
+    /* Pure black for primary elements */
+    --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light blue accent */
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 215 45% 12%;
+    /* Lighter gray for secondary elements */
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    /* Muted gray tones */
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 16%;
 
-    /* Gold luxury accent */
-    --accent: 40 70% 60%;
-    --accent-foreground: 215 45% 12%;
+    /* Subtle accent using dark gray */
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 215 55% 15%;
+    /* Minimal borders */
+    --border: 0 0% 0%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 0%;
 
-    --radius: 0.75rem;
+    --radius: 0.375rem;
 
-    /* Custom luxury dental theme colors */
-    --navy-darker: 215 60% 10%;
-    --navy-light: 215 45% 25%;
-    --gold: 40 70% 60%;
-    --gold-light: 40 80% 70%;
-    --blue-light: 210 50% 96%;
+    /* Minimalist theme colors */
+    --gray-light: 0 0% 85%;
+    --gray-medium: 0 0% 50%;
+    --gray-dark: 0 0% 20%;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(215 55% 15%) 0%, hsl(215 60% 10%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(40 70% 60%) 0%, hsl(40 80% 70%) 100%);
-    --gradient-overlay: linear-gradient(180deg, rgba(15, 31, 61, 0.8) 0%, rgba(15, 31, 61, 0.6) 100%);
+    /* Subtle gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 85%) 0%, hsl(0 0% 90%) 100%);
+    --gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
 
-    /* Shadows */
-    --shadow-soft: 0 4px 20px rgba(15, 31, 61, 0.08);
-    --shadow-medium: 0 8px 30px rgba(15, 31, 61, 0.12);
-    --shadow-strong: 0 20px 60px rgba(15, 31, 61, 0.15);
-    --shadow-gold: 0 8px 24px rgba(218, 165, 32, 0.2);
+    /* Soft shadows */
+    --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.12);
+    --shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.16);
 
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -65,33 +65,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 215 55% 8%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 10%;
+    --foreground: 0 0% 100%;
 
-    --card: 215 50% 12%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 215 50% 12%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 215 55% 15%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 215 45% 18%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 215 45% 18%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 40 70% 60%;
-    --accent-foreground: 215 45% 12%;
+    --accent: 0 0% 80%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 215 45% 18%;
-    --input: 215 45% 18%;
-    --ring: 215 55% 30%;
+    --border: 0 0% 25%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 70%;
   }
 }
 
@@ -137,23 +137,8 @@ All colors MUST be HSL.
     @apply bg-card rounded-xl shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-medium)] transition-[var(--transition-smooth)];
   }
 
-  .luxury-button {
-    @apply bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--gold-light))] text-primary font-semibold rounded-lg shadow-[var(--shadow-gold)] hover:scale-105 hover:shadow-[var(--shadow-strong)] transition-[var(--transition-smooth)] relative overflow-hidden;
-  }
-
-  .luxury-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s;
-  }
-
-  .luxury-button:hover::before {
-    left: 100%;
+  .minimal-button {
+    @apply bg-card text-primary font-medium rounded border border-primary hover:shadow-[var(--shadow-soft)] transition-[var(--transition-smooth)];
   }
 
   .section-container {
@@ -193,15 +178,14 @@ All colors MUST be HSL.
     @apply scale-110;
   }
 
-  /* Button glow effect */
-  .button-glow {
+  /* Minimal button effect */
+  .button-minimal {
     @apply relative;
-    box-shadow: 0 0 20px rgba(218, 165, 32, 0.3);
     transition: box-shadow 0.3s ease;
   }
 
-  .button-glow:hover {
-    box-shadow: 0 0 30px rgba(218, 165, 32, 0.6), 0 0 40px rgba(218, 165, 32, 0.4);
+  .button-minimal:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   /* Parallax effect */

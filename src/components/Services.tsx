@@ -14,28 +14,28 @@ const services = [
   },
   {
     icon: Layers,
-    title: "Veneers",
+    title: " Hollywood Smile Veneers",
     shortDesc: "Transform your smile with custom veneers",
     fullDesc: "Ultra-thin porcelain veneers crafted to perfection. We design natural-looking, durable veneers that enhance your smile's appearance, correcting chips, gaps, and discoloration.",
     color: "from-purple-500 to-pink-400",
   },
   {
     icon: Smile,
-    title: "Whitening / Bleaching",
+    title: "Implant",
     shortDesc: "Achieve a brighter, whiter smile",
     fullDesc: "Professional teeth whitening treatments using safe, effective methods. Choose from in-office power bleaching or take-home kits for a radiant smile up to 8 shades lighter.",
     color: "from-yellow-500 to-orange-400",
   },
   {
     icon: Baby,
-    title: "Pedodontics",
+    title: "Root Canal",
     shortDesc: "Specialized care for children's dental health",
     fullDesc: "Child-friendly dental care in a comfortable environment. Our pediatric specialists provide preventive treatments, education, and gentle procedures tailored for young patients.",
     color: "from-green-500 to-teal-400",
   },
   {
     icon: FileText,
-    title: "Endodontics / Restorative",
+    title: "Orthodontics",
     shortDesc: "Root canal and tooth restoration",
     fullDesc: "Advanced endodontic treatments including root canal therapy, pulp treatments, and restorative procedures. We save natural teeth using modern techniques and materials.",
     color: "from-red-500 to-pink-400",
@@ -47,20 +47,20 @@ const services = [
     fullDesc: "Comprehensive prosthodontic solutions including crowns, bridges, and dentures. We restore function and aesthetics with precision-crafted prosthetics and bite correction.",
     color: "from-indigo-500 to-blue-400",
   },
-  {
-    icon: AlignHorizontalJustifyCenter,
-    title: "Aligners",
-    shortDesc: "Invisible orthodontic treatment",
-    fullDesc: "Clear aligner therapy for discreet teeth straightening. Custom-made invisible aligners gradually move your teeth into perfect alignment without traditional braces.",
-    color: "from-teal-500 to-green-400",
-  },
-  {
-    icon: Activity,
-    title: "Periodontics & Dental Implants",
-    shortDesc: "Gum health and permanent tooth replacement",
-    fullDesc: "Expert periodontal care and implant dentistry. We treat gum disease, perform bone grafting, and place premium dental implants for lasting tooth replacement solutions.",
-    color: "from-orange-500 to-red-400",
-  },
+  // {
+  //   icon: AlignHorizontalJustifyCenter,
+  //   title: "Aligners",
+  //   shortDesc: "Invisible orthodontic treatment",
+  //   fullDesc: "Clear aligner therapy for discreet teeth straightening. Custom-made invisible aligners gradually move your teeth into perfect alignment without traditional braces.",
+  //   color: "from-teal-500 to-green-400",
+  // },
+  // {
+  //   icon: Activity,
+  //   title: "Periodontics & Dental Implants",
+  //   shortDesc: "Gum health and permanent tooth replacement",
+  //   fullDesc: "Expert periodontal care and implant dentistry. We treat gum disease, perform bone grafting, and place premium dental implants for lasting tooth replacement solutions.",
+  //   color: "from-orange-500 to-red-400",
+  // },
 ];
 
 export default function Services() {

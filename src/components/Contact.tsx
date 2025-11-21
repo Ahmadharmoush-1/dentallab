@@ -222,7 +222,7 @@ export default function Contact() {
                   href="mailto:info@Asmardental.lb"
                   className="text-accent hover:text-accent/80 font-semibold"
                 >
-                  info@Asmardental.lb
+                  info@Nahasdental.lb
                 </a>
               </div>
             </div>

@@ -3,23 +3,23 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "./ui/button";
 
-const teamMembers = [{
-  name: "Dr. Edward Henri El Asmar",
-  specialty: "Orthodontist & Dentofacial Orthopedist",
+const teamMembers = [  {
+  name: "Dr. Fadi Nahas",
+  specialty: "DDS , masters in  Prosthodontics",
+  bio: "Expert in prosthodontic rehabilitation including crowns, bridges, veneers, and full-mouth restorations. Specialized in digital smile design and advanced implant prosthetics.",
+  image: "/photos/DrNICOLAS.png",
+},{
+  name: "Dr. Lynn Khazzaka",
+  specialty: "DDS , Masters in Endodontics",
   bio: "Dedicated to children’s oral health, providing gentle, child-friendly treatments. Experienced in behavior management, dental growth monitoring, and preventive pediatric care.",
   image: "/photos/DrCHLOE.png",
 },{
-  name: "Dr. Eliana El Asmar ",
-  specialty: "Orthodontist & Dentofacial Orthopedist",
+  name: "Dr. Wassim El  Sayed",
+  specialty: "DDS , Masters in Orthodontics and Dentofacial Orthopedics - Clinical Instructor LU",
   bio: "Specialized in orthodontic treatments including braces, clear aligners, and bite correction. Focused on achieving functional, aesthetic, and long-lasting smile alignment.",
   image: "/photos/DrMARC.png",
 },
-//   {
-//   name: "Dr. Nicolas Sakr",
-//   specialty: "Prosthodontist",
-//   bio: "Expert in prosthodontic rehabilitation including crowns, bridges, veneers, and full-mouth restorations. Specialized in digital smile design and advanced implant prosthetics.",
-//   image: "/photos/DrNICOLAS.png",
-// },
+
 // {
 //   name: "Dr. Sara Chehab",
 //   specialty: "Endodontology Specialist",
