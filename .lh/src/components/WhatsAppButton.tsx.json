@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/WhatsAppButton.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1767011916083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1767011916083,
+            "name": "Commit-0",
+            "content": "import { MessageCircle } from \"lucide-react\";\r\n\r\nconst WhatsAppButton = () => {\r\n  const phoneNumber = \"96170848026\";\r\n  const message = encodeURIComponent(\r\n    \"Hello Dr. Ali Merhi, I would like to inquire about your dental services.\"\r\n  );\r\n\r\n  return (\r\n    <a\r\n      href={`https://wa.me/${phoneNumber}?text=${message}`}\r\n      target=\"_blank\"\r\n      rel=\"noopener noreferrer\"\r\n      className=\"fixed bottom-6 right-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 animate-float\"\r\n      aria-label=\"Contact via WhatsApp\"\r\n    >\r\n      <MessageCircle className=\"w-7 h-7 md:w-8 md:h-8 text-primary-foreground\" />\r\n      \r\n      {/* Pulse Effect */}\r\n      <span className=\"absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-30\" />\r\n    </a>\r\n  );\r\n};\r\n\r\nexport default WhatsAppButton;\r\n"
+        }
+    ]
+}

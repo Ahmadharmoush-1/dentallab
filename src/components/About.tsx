@@ -1,69 +1,66 @@
-import { Shield, Award, Sparkles } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
-const features = [
-  {
-    icon: Sparkles,
-    title: "Pain-Free Techniques",
-    description: "Advanced anesthesia and gentle procedures ensure maximum comfort during every visit.",
-  },
-  {
-    icon: Award,
-    title: "Certified Specialists",
-    description: "Our team consists of internationally certified dental professionals with years of expertise.",
-  },
-  {
-    icon: Shield,
-    title: "Latest Equipment",
-    description: "State-of-the-art technology and modern facilities for superior treatment outcomes.",
-  },
-];
-
-export default function About() {
-  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
-
+const About = () => {
   return (
-    <section ref={sectionRef} id="clinic" className="section-container bg-secondary/30">
-      <div className={`text-center mb-16 transition-all duration-1000 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}>
-        <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-          About Us
-        </span>
-        <h2 className="text-4xl md:text-5xl font-bold text-primary mt-4 mb-6">
-          The Clinic
-        </h2>
-        <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          At Nahas Dental Clinic, we believe that exceptional dental care goes beyond treatment. 
-          We combine luxury, comfort, and cutting-edge technology to create a transformative experience 
-          for every patient. Our philosophy is simple: perfection in every smile, comfort in every visit.
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-3 gap-8 mt-12">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className={`luxury-card p-8 text-center group hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
-            style={{ 
-              transitionDelay: isVisible ? `${index * 150}ms` : "0ms"
-            }}
-          >
-            <div className="w-16 h-16 mx-auto mb-6 bg-accent/10 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-              <feature.icon className="w-8 h-8 text-accent" />
+    <section id="about" className="section-padding bg-secondary">
+      <div className="container-luxury">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Image */}
+          <div className="relative order-2 md:order-1">
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-card">
+              <img
+                src="/photos/drlogo.jpg"
+                alt="Dr. Ali Merhi - Luxury AI Smile Architect"
+                className="w-full h-full object-cover"
+              />
             </div>
-            <h3 className="text-xl font-semibold text-primary mb-3">
-              {feature.title}
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              {feature.description}
-            </p>
+            {/* Decorative Elements */}
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-gold rounded-lg -z-10" />
+            <div className="absolute -top-6 -left-6 w-24 h-24 bg-gold/10 rounded-lg -z-10" />
           </div>
-        ))}
+
+          {/* Content */}
+          <div className="order-1 md:order-2">
+            <div className="luxury-divider !mx-0 mb-6" />
+            <p className="text-gold font-body text-sm tracking-[0.2em] uppercase mb-4">
+              About
+            </p>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground mb-6 leading-tight">
+              Meet Dr. Ali Merhi
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              With over 15 years of experience in aesthetic dentistry and maxillofacial surgery, 
+              Dr. Ali Merhi has established himself as a leading figure in luxury dental care in Lebanon.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Combining cutting-edge AI technology with artistic precision, Dr. Merhi crafts 
+              bespoke smiles that enhance natural beauty while ensuring optimal oral health. 
+              His approach integrates Digital Smile Design technology with traditional surgical 
+              expertise, delivering results that exceed expectations.
+            </p>
+
+            {/* Credentials */}
+            <div className="grid grid-cols-2 gap-6">
+              <div className="p-4 bg-background rounded-lg shadow-elegant">
+                <p className="text-gold font-heading text-2xl mb-1">15+</p>
+                <p className="text-sm text-muted-foreground">Years of Excellence</p>
+              </div>
+              <div className="p-4 bg-background rounded-lg shadow-elegant">
+                <p className="text-gold font-heading text-2xl mb-1">AI-Powered</p>
+                <p className="text-sm text-muted-foreground">Smile Design</p>
+              </div>
+              <div className="p-4 bg-background rounded-lg shadow-elegant">
+                <p className="text-gold font-heading text-2xl mb-1">Certified</p>
+                <p className="text-sm text-muted-foreground">Maxillofacial Surgeon</p>
+              </div>
+              <div className="p-4 bg-background rounded-lg shadow-elegant">
+                <p className="text-gold font-heading text-2xl mb-1">Premium</p>
+                <p className="text-sm text-muted-foreground">Patient Care</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
-}
+};
 
+export default About;

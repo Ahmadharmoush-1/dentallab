@@ -1,167 +1,95 @@
-import { useState } from "react";
-import { Sparkles, Heart, Smile, Baby, FileText, Layers, AlignHorizontalJustifyCenter, Activity } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
-import { Button } from "./ui/button";
+import { ArrowRight } from "lucide-react";
 
 const services = [
   {
-    icon: Sparkles,
-    title: "Cleaning Teeth",
-    shortDesc: "Professional cleaning and preventive care",
-    fullDesc: "Comprehensive dental cleaning removes plaque, tartar, and stains. Our gentle hygienists use advanced scaling techniques and polishing to keep your teeth healthy and bright.",
-    color: "from-blue-500 to-cyan-400",
+    title: "Digital Smile Design",
+    description: "AI-powered precision planning for your perfect smile, visualized before treatment begins.",
+    image: "/images/service-smile-design.jpg",
   },
   {
-    icon: Layers,
-    title: " Hollywood Smile Veneers",
-    shortDesc: "Transform your smile with custom veneers",
-    fullDesc: "Ultra-thin porcelain veneers crafted to perfection. We design natural-looking, durable veneers that enhance your smile's appearance, correcting chips, gaps, and discoloration.",
-    color: "from-purple-500 to-pink-400",
+    title: "Luxury Veneers",
+    description: "Ultra-thin porcelain shells crafted to perfection for a flawless, natural appearance.",
+    image: "/images/service-veneers.jpg",
   },
   {
-    icon: Smile,
-    title: "Implant",
-    shortDesc: "Achieve a brighter, whiter smile",
-    fullDesc: "Professional teeth whitening treatments using safe, effective methods. Choose from in-office power bleaching or take-home kits for a radiant smile up to 8 shades lighter.",
-    color: "from-yellow-500 to-orange-400",
+    title: "Elite Smile Makeovers",
+    description: "Complete smile transformations tailored to your unique facial features and personality.",
+    image: "/images/service-makeover.jpg",
   },
   {
-    icon: Baby,
-    title: "Root Canal",
-    shortDesc: "Specialized care for children's dental health",
-    fullDesc: "Child-friendly dental care in a comfortable environment. Our pediatric specialists provide preventive treatments, education, and gentle procedures tailored for young patients.",
-    color: "from-green-500 to-teal-400",
+    title: "Maxillofacial Surgery",
+    description: "Advanced surgical solutions for jaw alignment, facial reconstruction, and oral health.",
+    image: "/images/service-maxillofacial.jpg",
   },
   {
-    icon: FileText,
-    title: "Orthodontics",
-    shortDesc: "Root canal and tooth restoration",
-    fullDesc: "Advanced endodontic treatments including root canal therapy, pulp treatments, and restorative procedures. We save natural teeth using modern techniques and materials.",
-    color: "from-red-500 to-pink-400",
+    title: "Periodontal Surgery",
+    description: "Expert gum care and surgical treatments to restore and maintain healthy foundations.",
+    image: "/images/service-perio.jpg",
   },
-  {
-    icon: Heart,
-    title: "Occlusion & Prosthodontics",
-    shortDesc: "Full mouth reconstruction and prosthetics",
-    fullDesc: "Comprehensive prosthodontic solutions including crowns, bridges, and dentures. We restore function and aesthetics with precision-crafted prosthetics and bite correction.",
-    color: "from-indigo-500 to-blue-400",
-  },
-  // {
-  //   icon: AlignHorizontalJustifyCenter,
-  //   title: "Aligners",
-  //   shortDesc: "Invisible orthodontic treatment",
-  //   fullDesc: "Clear aligner therapy for discreet teeth straightening. Custom-made invisible aligners gradually move your teeth into perfect alignment without traditional braces.",
-  //   color: "from-teal-500 to-green-400",
-  // },
-  // {
-  //   icon: Activity,
-  //   title: "Periodontics & Dental Implants",
-  //   shortDesc: "Gum health and permanent tooth replacement",
-  //   fullDesc: "Expert periodontal care and implant dentistry. We treat gum disease, perform bone grafting, and place premium dental implants for lasting tooth replacement solutions.",
-  //   color: "from-orange-500 to-red-400",
-  // },
 ];
 
-export default function Services() {
-  const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
-  const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
+const Services = () => {
+  const scrollToBooking = () => {
+    document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <section ref={sectionRef} id="services" className="section-container">
-      <div className={`text-center mb-16 transition-all duration-1000 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}>
-        <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-          Our Services
-        </span>
-        <h2 className="text-4xl md:text-5xl font-bold text-primary mt-4 mb-6">
-          What We Do
-        </h2>
-        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-          Comprehensive dental services combining artistry, science, and technology
-        </p>
-      </div>
+    <section id="services" className="section-padding bg-background">
+      <div className="container-luxury">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="luxury-divider mb-6" />
+          <p className="text-gold font-body text-sm tracking-[0.2em] uppercase mb-4">
+            Our Expertise
+          </p>
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
+            Premium Services
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Experience world-class dental care with our comprehensive range of 
+            aesthetic and surgical treatments.
+          </p>
+        </div>
 
-      {/* Mobile: Horizontal Scroll with Snap */}
-      <div className="relative lg:hidden">
-        <div className="overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth pb-4">
-          <div className="flex gap-4 px-4">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="luxury-card p-6 cursor-pointer group min-w-[280px] snap-center hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
-                onClick={() => setSelectedService(service)}
-              >
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
-                  <service.icon className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-primary mb-2 group-hover:text-accent transition-colors">
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {services.map((service, index) => (
+            <div
+              key={service.title}
+              className={`group relative bg-card rounded-lg overflow-hidden shadow-elegant hover-lift cursor-pointer ${
+                index === 0 ? "md:col-span-2 lg:col-span-1" : ""
+              }`}
+              onClick={scrollToBooking}
+            >
+              {/* Image */}
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
+              </div>
+
+              {/* Content */}
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="font-heading text-xl md:text-2xl text-primary-foreground mb-2">
                   {service.title}
                 </h3>
-                <p className="text-sm text-muted-foreground">
-                  {service.shortDesc}
+                <p className="text-primary-foreground/70 text-sm mb-4 line-clamp-2">
+                  {service.description}
                 </p>
+                <div className="flex items-center gap-2 text-gold text-sm font-medium group-hover:gap-3 transition-all">
+                  Learn More
+                  <ArrowRight className="w-4 h-4" />
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-        {/* Gradient Indicators */}
-        <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-background to-transparent pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent pointer-events-none" />
       </div>
-
-      {/* Desktop: Grid Layout */}
-      <div className="hidden lg:grid lg:grid-cols-4 gap-6">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className={`luxury-card p-6 cursor-pointer group hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
-            style={{ 
-              transitionDelay: isVisible ? `${index * 75}ms` : "0ms"
-            }}
-            onClick={() => setSelectedService(service)}
-          >
-            <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
-              <service.icon className="w-7 h-7 text-white" />
-            </div>
-            <h3 className="text-lg font-semibold text-primary mb-2 group-hover:text-accent transition-colors">
-              {service.title}
-            </h3>
-            <p className="text-sm text-muted-foreground">
-              {service.shortDesc}
-            </p>
-          </div>
-        ))}
-      </div>
-
-      {/* Service Detail Modal */}
-      <Dialog open={!!selectedService} onOpenChange={() => setSelectedService(null)}>
-        <DialogContent className="sm:max-w-md">
-          <DialogHeader>
-            <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${selectedService?.color} flex items-center justify-center mb-4`}>
-              {selectedService && <selectedService.icon className="w-8 h-8 text-white" />}
-            </div>
-            <DialogTitle className="text-2xl">{selectedService?.title}</DialogTitle>
-            <DialogDescription className="text-base mt-4 leading-relaxed">
-              {selectedService?.fullDesc}
-            </DialogDescription>
-          </DialogHeader>
-          <div className="mt-6">
-            <Button
-              className="w-full luxury-button button-glow"
-              onClick={() => {
-                setSelectedService(null);
-                window.location.href = "#contact";
-              }}
-            >
-              Book This Service
-            </Button>
-          </div>
-        </DialogContent>
-      </Dialog>
     </section>
   );
-}
+};
+
+export default Services;

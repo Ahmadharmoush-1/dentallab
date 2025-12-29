@@ -1,96 +1,93 @@
-import { ArrowRight } from "lucide-react";
-import { useState, useEffect } from "react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
+import { Phone, MessageCircle } from "lucide-react";
 
-export default function Hero() {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+const Hero = () => {
+  const scrollToBooking = () => {
+    document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <section
-      id="home"
-      className="relative h-screen flex items-center justify-center overflow-hidden bg-[#D9D9D9]"
-    >
-      {/* Background Image + calm minimal overlay */}
-      <div className="absolute inset-0 z-0 animate-fade-in">
-        <img
-          src="/photos/dentalview.jpg"
-          alt="Nahas Dental Clinic"
-          className="w-full h-full object-cover opacity-90"
-        />
-        {/* Soft black overlay instead of colored gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/photos/drlogo.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/50" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
-        <div className="max-w-3xl">
-          <div
-            className="mb-6 inline-block animate-fade-in"
-            style={{ animationDelay: "200ms" }}
-          >
-            <span className="text-black font-semibold text-sm uppercase tracking-wider">
-              Premium Dental Care
-            </span>
-          </div>
-
-          <h1
-            className="text-5xl md:text-7xl font-bold text-black mb-6 leading-tight animate-fade-in"
-            style={{ animationDelay: "400ms" }}
-          >
-            Nahas Dental Clinic
-            <span className="text-[#2A2A2A]">.lb</span>
-          </h1>
-
-          <p
-            className="text-xl md:text-2xl text-black/80 mb-8 leading-relaxed max-w-2xl animate-fade-in"
-            style={{ animationDelay: "600ms" }}
-          >
-            Our team dedicates the time and technology needed to perfect your
-            smile.
+      <div className="relative z-10 container-luxury px-4 md:px-8 py-20 text-center md:text-left">
+        <div className="max-w-2xl mx-auto md:mx-0">
+          {/* Gold Accent Line */}
+          <div className="w-20 h-1 bg-gold mb-8 mx-auto md:mx-0 animate-fade-up" />
+          
+          {/* Subtitle */}
+          <p className="text-gold font-body text-sm md:text-base tracking-[0.3em] uppercase mb-4 animate-fade-up stagger-1 opacity-0">
+            Luxury AI Smile Architect
           </p>
 
-          {/* Buttons — minimalist, luxury, matching logo */}
-          <div
-            className="flex flex-col sm:flex-row gap-4 animate-fade-in"
-            style={{ animationDelay: "800ms" }}
-          >
-            {/* Solid Button (minimal white) */}
-            <Button
-              size="lg"
-              className="text-lg px-8 py-6 group hover:scale-110 transition-all duration-300 
-                         bg-white text-black border border-black rounded-lg shadow-sm hover:bg-black hover:text-white"
-              onClick={() => (window.location.href = "#clinic")}
-            >
-              Explore the Clinic
-              <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform duration-300" />
-            </Button>
+          {/* Main Title */}
+          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl text-primary-foreground leading-tight mb-6 animate-fade-up stagger-2 opacity-0">
+            Dr. Ali Merhi
+          </h1>
 
-            {/* Outline Button */}
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-lg px-8 py-6 bg-transparent border border-black text-black 
-                         hover:bg-black hover:text-white hover:scale-110 transition-all duration-300 rounded-lg"
-              onClick={() => (window.location.href = "#contact")}
+          {/* Tagline */}
+          <p className="font-body text-primary-foreground/80 text-lg md:text-xl lg:text-2xl font-light mb-8 leading-relaxed animate-fade-up stagger-3 opacity-0">
+            Crafting Perfect Smiles with Precision,<br className="hidden md:block" />
+            Artistry & Advanced Technology
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-up stagger-4 opacity-0">
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              onClick={scrollToBooking}
+              className="group"
             >
               Book Appointment
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Button>
+            <Button 
+              variant="secondary" 
+              size="lg"
+              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-foreground"
+              asChild
+            >
+              <a href="tel:+96170848026">
+                <Phone className="w-4 h-4" />
+                Call Now
+              </a>
+            </Button>
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="mt-12 flex flex-wrap gap-8 justify-center md:justify-start animate-fade-up stagger-5 opacity-0">
+            <div className="text-center">
+              <p className="text-gold font-heading text-3xl md:text-4xl">15+</p>
+              <p className="text-primary-foreground/60 text-sm">Years Experience</p>
+            </div>
+            <div className="text-center">
+              <p className="text-gold font-heading text-3xl md:text-4xl">5000+</p>
+              <p className="text-primary-foreground/60 text-sm">Smiles Created</p>
+            </div>
+            <div className="text-center">
+              <p className="text-gold font-heading text-3xl md:text-4xl">2</p>
+              <p className="text-primary-foreground/60 text-sm">Clinic Locations</p>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-        <div className="w-6 h-10 border-2 border-black/50 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-black/70 rounded-full"></div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
+        <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex justify-center pt-2">
+          <div className="w-1 h-3 bg-gold rounded-full animate-pulse" />
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Hero;

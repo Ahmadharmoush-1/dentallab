@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1763304357423,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1767011953141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,26 +2,29 @@\n import { Toaster as Sonner } from \"@/components/ui/sonner\";\r\n import { TooltipProvider } from \"@/components/ui/tooltip\";\r\n import { QueryClient, QueryClientProvider } from \"@tanstack/react-query\";\r\n import { BrowserRouter, Routes, Route } from \"react-router-dom\";\r\n+import { HelmetProvider } from \"react-helmet-async\";\r\n import Index from \"./pages/Index\";\r\n import NotFound from \"./pages/NotFound\";\r\n \r\n const queryClient = new QueryClient();\r\n \r\n const App = () => (\r\n-  <QueryClientProvider client={queryClient}>\r\n-    <TooltipProvider>\r\n-      <Toaster />\r\n-      <Sonner />\r\n-      <BrowserRouter>\r\n-        <Routes>\r\n-          <Route path=\"/\" element={<Index />} />\r\n-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL \"*\" ROUTE */}\r\n-          <Route path=\"*\" element={<NotFound />} />\r\n-        </Routes>\r\n-      </BrowserRouter>\r\n-    </TooltipProvider>\r\n-  </QueryClientProvider>\r\n+  <HelmetProvider>\r\n+    <QueryClientProvider client={queryClient}>\r\n\\ No newline at end of file\n+      <TooltipProvider>\r\n+        <Toaster />\r\n+        <Sonner />\r\n+        <BrowserRouter>\r\n+          <Routes>\r\n+            <Route path=\"/\" element={<Index />} />\r\n+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL \"*\" ROUTE */}\r\n+            <Route path=\"*\" element={<NotFound />} />\r\n+          </Routes>\r\n+        </BrowserRouter>\r\n+      </TooltipProvider>\r\n+    </QueryClientProvider>\r\n+  </HelmetProvider>\r\n );\r\n \r\n-export default App;\n+export default App;\r\n"
                 }
             ],
             "date": 1763304357423,
