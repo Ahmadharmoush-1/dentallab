@@ -15,8 +15,8 @@ const DentalImplants = () => {
         "Restored chewing function and confidence",
       ]}
       heroImage="/photos/service-implants.jpg"
-      beforeImage="/photos/before-after-implants.jpg"
-      afterImage="/photos/before-after-3.jpg"
+      beforeImage="/photos/before-implants.png"
+      afterImage="/photos/after-implants.png"
     />
   );
 };

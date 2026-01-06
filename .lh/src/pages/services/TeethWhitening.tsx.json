@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1767708212714,
@@ -12,6 +12,10 @@
                 {
                     "date": 1767708474948,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         \"Customized treatment intensity levels\",\r\n         \"Long-lasting brilliant results\",\r\n         \"Take-home maintenance kits included\",\r\n       ]}\r\n-      heroImage=\"//service-whitening.jpg\"\r\n+      heroImage=\"/photos/service-whitening.jpg\"\r\n       beforeImage=\"/images/before-after-whitening.jpg\"\r\n       afterImage=\"/images/before-after-3.jpg\"\r\n     />\r\n   );\r\n"
+                },
+                {
+                    "date": 1767709644606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+import ServicePageLayout from \"@/components/ServicePageLayout\";\r\n+\r\n+const TeethWhitening = () => {\r\n+  return (\r\n+    <ServicePageLayout\r\n+      title=\"Teeth Whitening\"\r\n+      tagline=\"Professional-grade whitening treatments for a brilliantly radiant smile.\"\r\n+      description=\"Achieve a dazzling, celebrity-worthy smile with our advanced professional whitening treatments. Using the latest light-activated technology and premium whitening agents, we safely brighten your teeth multiple shades in a single session. Our customized approach ensures optimal results while protecting your enamel sensitivity.\"\r\n+      features={[\r\n+        \"Advanced light-activated whitening technology\",\r\n+        \"Multiple shades brighter in one session\",\r\n+        \"Enamel-safe professional-grade formulas\",\r\n+        \"Customized treatment intensity levels\",\r\n+        \"Long-lasting brilliant results\",\r\n+        \"Take-home maintenance kits included\",\r\n+      ]}\r\n+      heroImage=\"/photos/service-whitening.jpg\"\r\n+      beforeImage=\"/photos/before-whitening.png\"\r\n+      afterImage=\"C:\\Users\\GamingCorner\\Desktop\\code\\dralimerhi\\public\\photos\\after-whitening.png\"\r\n+    />\r\n+  );\r\n+};\r\n+\r\n+export default TeethWhitening;\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1767708212714,

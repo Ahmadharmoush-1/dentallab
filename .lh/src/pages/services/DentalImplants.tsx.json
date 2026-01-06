@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1767708192269,
@@ -16,6 +16,14 @@
                 {
                     "date": 1767708462601,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n         \"Bone preservation and stimulation\",\r\n         \"Restored chewing function and confidence\",\r\n       ]}\r\n       heroImage=\"/photos/service-implants.jpg\"\r\n-      beforeImage=\"/images/before-after-implants.jpg\"\r\n-      afterImage=\"/images/before-after-3.jpg\"\r\n+      beforeImage=\"/photos/before-after-implants.jpg\"\r\n+      afterImage=\"/photos/before-after-3.jpg\"\r\n     />\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1767709957657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+import ServicePageLayout from \"@/components/ServicePageLayout\";\r\n+\r\n+const DentalImplants = () => {\r\n+  return (\r\n+    <ServicePageLayout\r\n+      title=\"Dental Implants\"\r\n+      tagline=\"Permanent tooth replacement solutions that look, feel, and function like natural teeth.\"\r\n+      description=\"Our dental implants represent the gold standard in tooth replacement. Using state-of-the-art titanium implants and precision surgical techniques, we restore your smile with permanent solutions that integrate seamlessly with your natural bone structure. Each implant is carefully planned and placed to ensure optimal function and aesthetics.\"\r\n+      features={[\r\n+        \"Premium titanium implants for superior biocompatibility\",\r\n+        \"3D-guided surgical placement for precision\",\r\n+        \"Natural-looking ceramic crowns\",\r\n+        \"Long-lasting permanent solution\",\r\n+        \"Bone preservation and stimulation\",\r\n+        \"Restored chewing function and confidence\",\r\n+      ]}\r\n+      heroImage=\"/photos/service-implants.jpg\"\r\n+      beforeImage=\"C:\\Users\\GamingCorner\\Desktop\\code\\dralimerhi\\public\\photos\\before-implants.png\"\r\n+      afterImage=\"/photos/before-after-3.jpg\"\r\n+    />\r\n+  );\r\n+};\r\n+\r\n+export default DentalImplants\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1767709966694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+import ServicePageLayout from \"@/components/ServicePageLayout\";\r\n+\r\n+const DentalImplants = () => {\r\n+  return (\r\n+    <ServicePageLayout\r\n+      title=\"Dental Implants\"\r\n+      tagline=\"Permanent tooth replacement solutions that look, feel, and function like natural teeth.\"\r\n+      description=\"Our dental implants represent the gold standard in tooth replacement. Using state-of-the-art titanium implants and precision surgical techniques, we restore your smile with permanent solutions that integrate seamlessly with your natural bone structure. Each implant is carefully planned and placed to ensure optimal function and aesthetics.\"\r\n+      features={[\r\n+        \"Premium titanium implants for superior biocompatibility\",\r\n+        \"3D-guided surgical placement for precision\",\r\n+        \"Natural-looking ceramic crowns\",\r\n+        \"Long-lasting permanent solution\",\r\n+        \"Bone preservation and stimulation\",\r\n+        \"Restored chewing function and confidence\",\r\n+      ]}\r\n+      heroImage=\"/photos/service-implants.jpg\"\r\n+      beforeImage=\"/photos/before-implants.png\"\r\n+      afterImage=\"/photos/after-implants.png\"\r\n+    />\r\n+  );\r\n+};\r\n+\r\n+export default DentalImplants\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1767708192269,

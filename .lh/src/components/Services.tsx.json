@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 16,
+            "activePatchIndex": 20,
             "patches": [
                 {
                     "date": 1763304308445,
@@ -72,6 +72,22 @@
                 {
                     "date": 1767708525983,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n   },\r\n   {\r\n     title: \"Zirconia Crowns\",\r\n     description: \"Premium full-ceramic restorations combining exceptional strength with natural beauty.\",\r\n-    image: \"/images/service-crowns.jpg\",\r\n+    image: \"/photos/service-crowns.jpg\",\r\n     link: \"/services/zirconia-crowns\",\r\n   },\r\n ];\r\n \r\n"
+                },
+                {
+                    "date": 1767710255630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   },\r\n   {\r\n     title: \"Luxury Veneers\",\r\n     description: \"Ultra-thin porcelain shells crafted to perfection for a flawless, natural appearance.\",\r\n-    image: \"/photos/service-veneers.jpg\",\r\n+    image: \"/photos/e-maxveneers.png\",\r\n     link: \"/services/veneers\",\r\n   },\r\n   {\r\n     title: \"Dental Implants\",\r\n@@ -22,9 +22,9 @@\n   },\r\n   {\r\n     title: \"Teeth Whitening\",\r\n     description: \"Professional-grade whitening treatments for a brilliantly radiant smile.\",\r\n-    image: \"/images/service-whitening.jpg\",\r\n+    image: \"/photos/service-whitening.jpg\",\r\n     link: \"/services/teeth-whitening\",\r\n   },\r\n   {\r\n     title: \"Zirconia Crowns\",\r\n"
+                },
+                {
+                    "date": 1767710271875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     image: \"/photos/service-smile-design.jpg\",\r\n     link: \"/services/smile-design\",\r\n   },\r\n   {\r\n-    title: \"Luxury Veneers\",\r\n+    title: \" feldspathic emax\",\r\n     description: \"Ultra-thin porcelain shells crafted to perfection for a flawless, natural appearance.\",\r\n     image: \"/photos/e-maxveneers.png\",\r\n     link: \"/services/veneers\",\r\n   },\r\n"
+                },
+                {
+                    "date": 1767710279441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     image: \"/photos/service-smile-design.jpg\",\r\n     link: \"/services/smile-design\",\r\n   },\r\n   {\r\n-    title: \" feldspathic emax\",\r\n+    title: \" feldspathic  Emax Veneers\",\r\n     description: \"Ultra-thin porcelain shells crafted to perfection for a flawless, natural appearance.\",\r\n     image: \"/photos/e-maxveneers.png\",\r\n     link: \"/services/veneers\",\r\n   },\r\n"
+                },
+                {
+                    "date": 1767710285328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     image: \"/photos/service-smile-design.jpg\",\r\n     link: \"/services/smile-design\",\r\n   },\r\n   {\r\n-    title: \" feldspathic  Emax Veneers\",\r\n+    title: \" feldspathic E-max Veneers\",\r\n     description: \"Ultra-thin porcelain shells crafted to perfection for a flawless, natural appearance.\",\r\n     image: \"/photos/e-maxveneers.png\",\r\n     link: \"/services/veneers\",\r\n   },\r\n"
                 }
             ],
             "date": 1763304308445,

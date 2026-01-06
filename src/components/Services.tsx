@@ -9,9 +9,9 @@ const services = [
     link: "/services/smile-design",
   },
   {
-    title: "Luxury Veneers",
+    title: " Feldspathic E-max Veneers",
     description: "Ultra-thin porcelain shells crafted to perfection for a flawless, natural appearance.",
-    image: "/photos/service-veneers.jpg",
+    image: "/photos/e-maxveneers.png",
     link: "/services/veneers",
   },
   {

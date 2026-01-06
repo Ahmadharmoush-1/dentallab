@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1767708224159,
@@ -12,6 +12,14 @@
                 {
                     "date": 1767708479824,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         \"Stain-resistant and durable construction\",\r\n         \"Natural light reflection mimicking real enamel\",\r\n         \"Personalized design for facial harmony\",\r\n       ]}\r\n-      heroImage=\"/images/service-veneers.jpg\"\r\n+      heroImage=\"//service-veneers.jpg\"\r\n       beforeImage=\"/images/before-after-2.jpg\"\r\n       afterImage=\"/images/before-after-3.jpg\"\r\n     />\r\n   );\r\n"
+                },
+                {
+                    "date": 1767710203953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,11 @@\n         \"Stain-resistant and durable construction\",\r\n         \"Natural light reflection mimicking real enamel\",\r\n         \"Personalized design for facial harmony\",\r\n       ]}\r\n-      heroImage=\"//service-veneers.jpg\"\r\n-      beforeImage=\"/images/before-after-2.jpg\"\r\n-      afterImage=\"/images/before-after-3.jpg\"\r\n+      heroImage=\"C:\\Users\\GamingCorner\\Desktop\\code\\dralimerhi\\public\\photos\\e-maxveneers.png\"\r\n+      beforeImage=\"/photos/before-after-2.jpg\"\r\n+      afterImage=\"/photos/before-after-3.jpg\"\r\n     />\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1767710355503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,11 @@\n         \"Stain-resistant and durable construction\",\r\n         \"Natural light reflection mimicking real enamel\",\r\n         \"Personalized design for facial harmony\",\r\n       ]}\r\n-      heroImage=\"C:\\Users\\GamingCorner\\Desktop\\code\\dralimerhi\\public\\photos\\e-maxveneers.png\"\r\n-      beforeImage=\"/photos/before-after-2.jpg\"\r\n-      afterImage=\"/photos/before-after-3.jpg\"\r\n+      heroImage=\"/photos/e-maxveneers.png\"\r\n+      beforeImage=\"/photos/before-emaxveneers.png\"\r\n+      afterImage=\"/photos/after-emaxveneers.png\"\r\n     />\r\n   );\r\n };\r\n \r\n"
                 }
             ],
             "date": 1767708224159,

@@ -14,9 +14,9 @@ const Veneers = () => {
         "Natural light reflection mimicking real enamel",
         "Personalized design for facial harmony",
       ]}
-      heroImage="/photos/service-veneers.jpg"
-      beforeImage="/photos/before-after-2.jpg"
-      afterImage="/photos/before-after-3.jpg"
+      heroImage="/photos/e-maxveneers.png"
+      beforeImage="/photos/before-emaxveneers.png"
+      afterImage="/photos/after-emaxveneers.png"
     />
   );
 };

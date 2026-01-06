@@ -34,7 +34,8 @@ const ServicePageLayout = ({
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[55vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden">
+
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -61,16 +62,19 @@ const ServicePageLayout = ({
           <p className="text-gold font-body text-sm tracking-[0.2em] uppercase mb-4">
             Premium Service
           </p>
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-primary-foreground mb-6 leading-tight">
+          <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+
             {title}
           </h1>
-          <p className="text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+         <p className="text-primary-foreground/80 text-base md:text-lg">
+
             {tagline}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               variant="secondary"
-              size="lg"
+              size="default"
+
               className="group"
               onClick={scrollToContact}
             >
@@ -79,7 +83,8 @@ const ServicePageLayout = ({
             </Button>
             <Button
               variant="secondary"
-              size="lg"
+              size="default"
+
               asChild
             >
               <a href="tel:+96170848026">
@@ -152,7 +157,8 @@ const ServicePageLayout = ({
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               variant="secondary"
-              size="lg"
+              size="default"
+
               onClick={scrollToContact}
               className="hover-lift"
             >
@@ -161,7 +167,8 @@ const ServicePageLayout = ({
             </Button>
             <Button
               variant="secondary"
-              size="lg"
+             size="default"
+
               asChild
               className="hover-lift"
             >

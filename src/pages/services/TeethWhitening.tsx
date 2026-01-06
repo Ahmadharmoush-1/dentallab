@@ -15,8 +15,8 @@ const TeethWhitening = () => {
         "Take-home maintenance kits included",
       ]}
       heroImage="/photos/service-whitening.jpg"
-      beforeImage="/photos/before-after-whitening.jpg"
-      afterImage="/photos/before-after-3.jpg"
+      beforeImage="/photos/before-whitening.png"
+      afterImage="/photos/after-whitening.png"
     />
   );
 };
