@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/pages/services/ZirconiaCrowns.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1767708233950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1767708485950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,11 @@\n         \"CAD/CAM precision manufacturing\",\r\n         \"Stain and chip resistant\",\r\n         \"Perfect color matching to existing teeth\",\r\n       ]}\r\n-      heroImage=\"/images/service-crowns.jpg\"\r\n-      beforeImage=\"/images/before-after-crowns.jpg\"\r\n-      afterImage=\"/images/before-after-2.jpg\"\r\n+      heroImage=\"/photos/service-crowns.jpg\"\r\n+      beforeImage=\"/photos/before-after-crowns.jpg\"\r\n+      afterImage=\"/photos/before-after-2.jpg\"\r\n     />\r\n   );\r\n };\r\n \r\n"
+                }
+            ],
+            "date": 1767708233950,
+            "name": "Commit-0",
+            "content": "import ServicePageLayout from \"@/components/ServicePageLayout\";\r\n\r\nconst ZirconiaCrowns = () => {\r\n  return (\r\n    <ServicePageLayout\r\n      title=\"Zirconia Crowns\"\r\n      tagline=\"Premium full-ceramic restorations combining exceptional strength with natural beauty.\"\r\n      description=\"Our zirconia crowns represent the perfect fusion of strength and aesthetics. Crafted from the finest dental-grade zirconia, these crowns offer unparalleled durability while providing the natural translucency of real teeth. Each crown is custom-designed using digital precision to ensure a perfect fit and seamless integration with your smile.\"\r\n      features={[\r\n        \"Superior strength compared to traditional ceramics\",\r\n        \"Natural light transmission for lifelike appearance\",\r\n        \"Metal-free biocompatible material\",\r\n        \"CAD/CAM precision manufacturing\",\r\n        \"Stain and chip resistant\",\r\n        \"Perfect color matching to existing teeth\",\r\n      ]}\r\n      heroImage=\"/images/service-crowns.jpg\"\r\n      beforeImage=\"/images/before-after-crowns.jpg\"\r\n      afterImage=\"/images/before-after-2.jpg\"\r\n    />\r\n  );\r\n};\r\n\r\nexport default ZirconiaCrowns;"
+        }
+    ]
+}

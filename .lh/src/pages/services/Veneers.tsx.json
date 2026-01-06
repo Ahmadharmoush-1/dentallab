@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/pages/services/Veneers.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1767708224159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1767708479824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         \"Stain-resistant and durable construction\",\r\n         \"Natural light reflection mimicking real enamel\",\r\n         \"Personalized design for facial harmony\",\r\n       ]}\r\n-      heroImage=\"/images/service-veneers.jpg\"\r\n+      heroImage=\"//service-veneers.jpg\"\r\n       beforeImage=\"/images/before-after-2.jpg\"\r\n       afterImage=\"/images/before-after-3.jpg\"\r\n     />\r\n   );\r\n"
+                }
+            ],
+            "date": 1767708224159,
+            "name": "Commit-0",
+            "content": "import ServicePageLayout from \"@/components/ServicePageLayout\";\r\n\r\nconst Veneers = () => {\r\n  return (\r\n    <ServicePageLayout\r\n      title=\"Luxury Veneers\"\r\n      tagline=\"Ultra-thin porcelain shells crafted to perfection for a flawless, natural appearance.\"\r\n      description=\"Experience the ultimate in smile enhancement with our premium porcelain veneers. Each veneer is meticulously handcrafted by master ceramists to achieve a natural, luminous appearance that complements your unique features. Our veneers are designed to last, providing you with a stunning smile for years to come.\"\r\n      features={[\r\n        \"Premium-grade porcelain for natural translucency\",\r\n        \"Custom shade matching to complement your skin tone\",\r\n        \"Minimal tooth preparation for maximum preservation\",\r\n        \"Stain-resistant and durable construction\",\r\n        \"Natural light reflection mimicking real enamel\",\r\n        \"Personalized design for facial harmony\",\r\n      ]}\r\n      heroImage=\"/images/service-veneers.jpg\"\r\n      beforeImage=\"/images/before-after-2.jpg\"\r\n      afterImage=\"/images/before-after-3.jpg\"\r\n    />\r\n  );\r\n};\r\n\r\nexport default Veneers;"
+        }
+    ]
+}

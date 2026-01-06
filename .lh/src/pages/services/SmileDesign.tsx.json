@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/pages/services/SmileDesign.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1767708202495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1767708468153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         \"Virtual try-on to preview your transformation\",\r\n         \"Precise treatment planning for optimal results\",\r\n         \"Collaborative approach with patient input throughout\",\r\n       ]}\r\n-      heroImage=\"/images/service-smile-design.jpg\"\r\n+      heroImage=\"/ph/service-smile-design.jpg\"\r\n       beforeImage=\"/images/before-after-1.jpg\"\r\n       afterImage=\"/images/before-after-2.jpg\"\r\n     />\r\n   );\r\n"
+                }
+            ],
+            "date": 1767708202495,
+            "name": "Commit-0",
+            "content": "import ServicePageLayout from \"@/components/ServicePageLayout\";\r\n\r\nconst SmileDesign = () => {\r\n  return (\r\n    <ServicePageLayout\r\n      title=\"Luxury Smile Design\"\r\n      tagline=\"AI-powered precision planning for your perfect smile, visualized before treatment begins.\"\r\n      description=\"Our Digital Smile Design technology represents the pinnacle of modern dentistry. Using advanced AI and 3D imaging, we create a complete visualization of your perfect smile before any treatment begins. This revolutionary approach ensures predictable, stunning results tailored to your unique facial features.\"\r\n      features={[\r\n        \"Advanced AI-powered smile analysis and planning\",\r\n        \"3D visualization of your future smile before treatment\",\r\n        \"Personalized design based on facial proportions\",\r\n        \"Virtual try-on to preview your transformation\",\r\n        \"Precise treatment planning for optimal results\",\r\n        \"Collaborative approach with patient input throughout\",\r\n      ]}\r\n      heroImage=\"/images/service-smile-design.jpg\"\r\n      beforeImage=\"/images/before-after-1.jpg\"\r\n      afterImage=\"/images/before-after-2.jpg\"\r\n    />\r\n  );\r\n};\r\n\r\nexport default SmileDesign;\r\n"
+        }
+    ]
+}
